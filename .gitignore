@@ -1,0 +1,17 @@
+### System files ###
+.DS_Store
+
+### IDE files & directories ###
+.vscode
+.idea
+
+### Binaries, Executables & others ###
+bin/
+*.so
+*.dll
+*.dylib
+*.exe
+*.out
+*.test
+__pycache__/
+.Python
