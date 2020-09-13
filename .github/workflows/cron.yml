@@ -1,0 +1,25 @@
+name: Cron
+
+on:
+  schedule:
+    - cron: "30 16 * * *"
+
+jobs:
+  mkdir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-go@v2
+        with:
+          go-version: ^1.14
+        id: go
+      - uses: actions/checkout@v2
+      - run: go run github.com/Shivam010/daily-coding-problem
+        env:
+          cron: true # setup a new problem directory
+      - run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git status
+          git add .
+          git commit -m "Setup new problem directory"
+          git push

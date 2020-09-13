@@ -1,0 +1,25 @@
+name: Script
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-go@v2
+        with:
+          go-version: ^1.14
+        id: go
+      - uses: actions/checkout@v2
+      - run: go run github.com/Shivam010/daily-coding-problem
+        env:
+          push: true # update the readme
+      - run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git status
+          git add .
+          git commit -m "Update Readme.md file"
+          git push

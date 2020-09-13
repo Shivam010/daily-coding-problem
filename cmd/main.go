@@ -1,3 +1,5 @@
+// main package is the script which on running will setup a new
+// daily problem directory and update readme using Github Actions
 package main
 
 import (
@@ -14,9 +16,13 @@ import (
 
 func main() {
 	if os.Getenv("push") != "" {
+		// runs using Github Actions' Push event
+		// and update the readme
 		onPush()
 	}
 	if os.Getenv("cron") != "" {
+		// runs using Github Actions' Cron job every day
+		// and setup a new problem directory
 		onCronRun()
 	}
 }
@@ -106,7 +112,7 @@ func extract(file string) (string, error) {
 	}
 	st += len(stSep)
 	en := bytes.Index(data, endSep)
-	return string(data[st : en]), nil
+	return string(data[st:en]), nil
 }
 
 func onCronRun() {
