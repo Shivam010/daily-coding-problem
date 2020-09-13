@@ -225,6 +225,10 @@ calls f after n milliseconds.
 	<img src="https://github.com/Shivam010/Shivam010/raw/master/icons/github.svg" alt="Github@Shivam010">
     </a>
     &nbsp;
+    <a href="https://gitlab.com/Shivam010" alt="Gitlab">
+	<img src="https://github.com/Shivam010/Shivam010/raw/master/icons/gitlab.svg" alt="Gitlab@Shivam010">
+    </a>
+    &nbsp;
     <a href="https://www.linkedin.com/in/shivam010" alt="LinkedIn">
 	<img src="https://github.com/Shivam010/Shivam010/raw/master/icons/linkedin.svg" alt="LinkedIn@Shivam010">
     </a>
