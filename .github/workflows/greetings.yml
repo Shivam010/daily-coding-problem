@@ -18,12 +18,3 @@ jobs:
               repo: context.repo.repo,
               body: '👋 Thanks for your time! Someone will soon get back to you.'
             })
-            if (context.payload.pull_request && context.payload.sender.login != context.repo.owner) {
-              github.pulls.requestReviewers({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                pull_number: context.issue.number,
-                reviewers: [context.repo.owner],
-              });
-            }
-            
