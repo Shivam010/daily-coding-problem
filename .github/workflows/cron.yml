@@ -3,6 +3,7 @@ name: Cron
 on:
   schedule:
     - cron: "30 16 * * *"
+  workflow_dispatch:
 
 jobs:
   mkdir:
@@ -21,5 +22,5 @@ jobs:
           git config user.email github-actions@github.com
           git status
           git add .
-          git commit -m "Setup new problem directory"
+          git commit -m "Setup new problem directory" || echo "Ignoring nothing to commit"
           git push
