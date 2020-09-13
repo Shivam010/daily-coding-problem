@@ -5,10 +5,12 @@ Problem selection is done by the [Daily Coding Problem](https://www.dailycodingp
 
 _Starting from September 03, 2020_
 
----
+_Want to join me? or Just need to stay upto date? <br>
+**Start watching the repository.**_
 
-Problem 001
------------
+
+Problem #001
+------------
 This problem was recently asked by Google.
 
 Given a list of numbers and a number k, return whether any two numbers from the
@@ -22,10 +24,9 @@ Bonus: Can you do this in one pass?
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](001/code.cpp)<br>
 
----
 
-Problem 002
------------
+Problem #002
+------------
 This problem was asked by Uber.
 
 Given an array of integers, return a new array such that each element at index i
@@ -42,10 +43,9 @@ Follow-up: what if you can't use division?
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](002/code.cpp)<br>
 
----
 
-Problem 003
------------
+Problem #003
+------------
 This problem was asked by Google.
 
 Given the root to a binary tree, implement serialize(root), which serializes 
@@ -68,10 +68,9 @@ For example, given the following Node class
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [Python](003/code.py)<br>
 
----
 
-Problem 004
------------
+Problem #004
+------------
 This problem was asked by Stripe.
 
 Given an array of integers, find the first missing positive integer in linear
@@ -88,10 +87,9 @@ You can modify the input array in-place.
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](004/code.cpp)<br>
 
----
 
-Problem 005
------------
+Problem #005
+------------
 This problem was asked by Jane Street.
 
 `cons(a, b)` constructs a pair, and `car(pair)` and `cdr(pair)` returns the 
@@ -111,10 +109,9 @@ Implement `car` and `cdr`.
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [Python](005/code.py)<br>
 
----
 
-Problem 006
------------
+Problem #006
+------------
 This problem was asked by Google.
 
 An XOR linked list is a more memory efficient doubly linked list. Instead of
@@ -131,10 +128,9 @@ between nodes and memory addresses.
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](006/code.cpp)<br>
 
----
 
-Problem 007
------------
+Problem #007
+------------
 This problem was asked by Facebook.
 
 Given the mapping a = 1, b = 2, ... z = 26, and an encoded message, count the
@@ -150,10 +146,9 @@ allowed.
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](007/code.cpp)<br>
 
----
 
-Problem 008
------------
+Problem #008
+------------
 This problem was asked by Google.
 
 A unival tree (which stands for "universal value") is a tree where all nodes
@@ -176,10 +171,9 @@ For example, the following tree has 5 unival subtrees:
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](008/code.cpp)<br>
 
----
 
-Problem 009
------------
+Problem #009
+------------
 This problem was asked by Airbnb.
 
 Given a list of integers, write a function that returns the largest sum of
@@ -194,10 +188,9 @@ Follow-up: Can you do this in O(N) time and constant space?
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](009/code.cpp)<br>
 
----
 
-Problem 010
------------
+Problem #010
+------------
 This problem was asked by Apple.
 
 Implement a job scheduler which takes in a function f and an integer n, and
@@ -209,11 +202,10 @@ calls f after n milliseconds.
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [Python](010/code.py)<br>
 
----
 
 
 ![]()
----
+-----
 
 <p align="center">
     <b><i>
