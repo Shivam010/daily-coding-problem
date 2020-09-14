@@ -18,8 +18,8 @@ jobs:
         env:
           cron: true # setup a new problem directory
       - run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config user.name "Shivam Rathore"
+          git config user.email shivam.rathore010@gmail.com
           git status
           git add .
           git commit -m "Setup new problem directory" || echo "Ignoring nothing to commit"
