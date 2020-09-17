@@ -1,7 +1,10 @@
 /*
 Daily Coding Challenge #015
 ---------------------------
+This problem was asked by Facebook.
 
+Given a stream of elements too large to store in memory, pick a random element
+from the stream with uniform probability.
 
 Run Using
 ---------
@@ -10,20 +13,18 @@ g++ 015/code.cpp -o bin/out && ./bin/out < 015/in.txt > 015/out.txt
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
-#define mk make_pair
-#define pb push_back
-#define Pi pair<int, int>
-#define Pl pair<long long, long long>
-#define vi vector<int>
-#define vl vector<long long>
-#define vb vector<bool>
-#define vp vector<pair<int, int>>
-#define vpl vector<pair<long long, long long>>
-#define F first
-#define S second
-#define min(a, b) ((a < b) ? a : b)
-const ll mod = 1000000007;
 
 int main() {
-
+    srand(time(NULL));
+    string n, res;
+    ll cnt = 0;
+    while (cin >> n) {
+        cnt++;
+        int rn = rand() % cnt;
+        if (cnt == 1 || rn == cnt - 1) {
+            res = n;
+        }
+        cout << res << endl;
+    }
+    return 0;
 }
