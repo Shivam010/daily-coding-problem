@@ -262,6 +262,29 @@ characters is "bcb".
     • [C++](013/code.cpp)<br>
 
 
+Problem #014
+------------
+
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](014/code.cpp)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [Python](014/code.py)<br>
+
+
+Problem #015
+------------
+This problem was asked by Facebook.
+
+Given a stream of elements too large to store in memory, pick a random element
+from the stream with uniform probability.
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](015/code.cpp)<br>
+
+
 
 ![]()
 -----
