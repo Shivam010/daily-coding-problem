@@ -39,21 +39,46 @@ func createPy(name string) error {
 	return dotPyTmpl.Execute(file, name)
 }
 
+// SolutionData represents a unit solution block
 type SolutionData struct {
 	Language string
 	FilePath string
 }
 
+// ProblemData represents a unit problem that is solved
 type ProblemData struct {
 	Number    string
 	Data      string
+	Unsolved  []string
 	Solutions []*SolutionData
 }
 
-func updateReadme(list []*ProblemData) error {
+// Data represents the final object for the template containing
+// solved problems' data and unsolved one's number.
+type Data struct {
+	Problems []*ProblemData
+	Unsolved []string
+	// functions
+	Last   func(sl []string) string
+	Missed func(sl []string) []string
+}
+
+func updateReadme(data *Data) error {
+	data.Last = func(sl []string) string {
+		if len(sl) == 0 {
+			return ""
+		}
+		return sl[len(sl)-1]
+	}
+	data.Missed = func(sl []string) []string {
+		if len(sl) == 0 {
+			return sl
+		}
+		return sl[:len(sl)-1]
+	}
 	file, err := os.Create("README.md")
 	if err != nil {
 		return err
 	}
-	return readmeTmpl.Execute(file, list)
+	return readmeTmpl.Execute(file, data)
 }

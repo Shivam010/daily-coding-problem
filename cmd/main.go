@@ -24,10 +24,12 @@ func main() {
 		// runs using Github Actions' Cron job every day
 		// and setup a new problem directory
 		onCronRun()
+		onPush()
 	}
 }
 
 func onPush() {
+	fmt.Println("Updating the README")
 	list, err := ioutil.ReadDir(".")
 	if err != nil {
 		log.Println("read dir error:", err)
@@ -35,6 +37,8 @@ func onPush() {
 	}
 
 	prob := make([]*ProblemData, 0, len(list))
+	unsolved := make([]string, 0, len(list))
+
 	for _, dir := range list {
 		// check directory
 		n, err := strconv.Atoi(dir.Name())
@@ -81,14 +85,21 @@ func onPush() {
 			})
 		}
 
+		if data == "\n\n\n" {
+			unsolved = append(unsolved, name)
+			continue
+		}
 		prob = append(prob, &ProblemData{
 			Number:    name,
 			Data:      data,
 			Solutions: solList,
 		})
 	}
-	if err := updateReadme(prob); err != nil {
-		log.Printf("error updating READMe: %v\n", err)
+	if err := updateReadme(&Data{
+		Problems: prob,
+		Unsolved: unsolved,
+	}); err != nil {
+		log.Printf("error updating README: %v\n", err)
 		return
 	}
 }
@@ -116,6 +127,7 @@ func extract(file string) (string, error) {
 }
 
 func onCronRun() {
+	fmt.Println("Setting up new Problem directory")
 	list, err := ioutil.ReadDir(".")
 	if err != nil {
 		log.Println("read dir error:", err)

@@ -1,5 +1,9 @@
 Daily Coding Problem
 ====================
+[![Script](https://github.com/Shivam010/daily-coding-problem/workflows/Script/badge.svg)](https://github.com/Shivam010/daily-coding-problem/actions?query=workflow%3AScript)
+[![Cron](https://github.com/Shivam010/daily-coding-problem/workflows/Cron/badge.svg)](https://github.com/Shivam010/daily-coding-problem/actions?query=workflow%3ACron)
+[![Greetings](https://github.com/Shivam010/daily-coding-problem/workflows/Greetings/badge.svg)](https://github.com/Shivam010/daily-coding-problem/actions?query=workflow%3AGreetings)
+
 Solving one problem every day.
 Problem selection is done by the [Daily Coding Problem](https://www.dailycodingproblem.com/) initiative.
 
@@ -9,7 +13,7 @@ _Want to join me? or Just need to stay upto date? <br>
 **Start watching the repository.**_
 
 
-Problem #001
+Problem: &nbsp;`#001`
 ------------
 This problem was recently asked by Google.
 
@@ -25,7 +29,7 @@ Bonus: Can you do this in one pass?
     • [C++](001/code.cpp)<br>
 
 
-Problem #002
+Problem: &nbsp;`#002`
 ------------
 This problem was asked by Uber.
 
@@ -44,7 +48,7 @@ Follow-up: what if you can't use division?
     • [C++](002/code.cpp)<br>
 
 
-Problem #003
+Problem: &nbsp;`#003`
 ------------
 This problem was asked by Google.
 
@@ -69,7 +73,7 @@ For example, given the following Node class
     • [Python](003/code.py)<br>
 
 
-Problem #004
+Problem: &nbsp;`#004`
 ------------
 This problem was asked by Stripe.
 
@@ -88,7 +92,7 @@ You can modify the input array in-place.
     • [C++](004/code.cpp)<br>
 
 
-Problem #005
+Problem: &nbsp;`#005`
 ------------
 This problem was asked by Jane Street.
 
@@ -110,7 +114,7 @@ Implement `car` and `cdr`.
     • [Python](005/code.py)<br>
 
 
-Problem #006
+Problem: &nbsp;`#006`
 ------------
 This problem was asked by Google.
 
@@ -129,7 +133,7 @@ between nodes and memory addresses.
     • [C++](006/code.cpp)<br>
 
 
-Problem #007
+Problem: &nbsp;`#007`
 ------------
 This problem was asked by Facebook.
 
@@ -147,7 +151,7 @@ allowed.
     • [C++](007/code.cpp)<br>
 
 
-Problem #008
+Problem: &nbsp;`#008`
 ------------
 This problem was asked by Google.
 
@@ -172,7 +176,7 @@ For example, the following tree has 5 unival subtrees:
     • [C++](008/code.cpp)<br>
 
 
-Problem #009
+Problem: &nbsp;`#009`
 ------------
 This problem was asked by Airbnb.
 
@@ -189,7 +193,7 @@ Follow-up: Can you do this in O(N) time and constant space?
     • [C++](009/code.cpp)<br>
 
 
-Problem #010
+Problem: &nbsp;`#010`
 ------------
 This problem was asked by Apple.
 
@@ -203,7 +207,7 @@ calls f after n milliseconds.
     • [Python](010/code.py)<br>
 
 
-Problem #011
+Problem: &nbsp;`#011`
 ------------
 This problem was asked by Twitter.
 
@@ -222,7 +226,7 @@ speed up queries.
     • [C++](011/code.cpp)<br>
 
 
-Problem #012
+Problem: &nbsp;`#012`
 ------------
 This problem was asked by Amazon.
 
@@ -247,7 +251,7 @@ could climb 1, 3, or 5 steps at a time.
     • [C++](012/code.cpp)<br>
 
 
-Problem #013
+Problem: &nbsp;`#013`
 ------------
 This problem was asked by Amazon.
 
@@ -262,7 +266,7 @@ characters is "bcb".
     • [C++](013/code.cpp)<br>
 
 
-Problem #014
+Problem: &nbsp;`#014`
 ------------
 This problem was asked by Google.
 
@@ -276,7 +280,7 @@ Hint: The basic equation of a circle is x2 + y2 = r2.
     • [C++](014/code.cpp)<br>
 
 
-Problem #015
+Problem: &nbsp;`#015`
 ------------
 This problem was asked by Facebook.
 

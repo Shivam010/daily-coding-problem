@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: go run github.com/Shivam010/daily-coding-problem/cmd
         env:
-          cron: true # setup a new problem directory
+          cron: true # setup a new problem directory & update readme
       - run: |
           git config user.name "Shivam Rathore"
           git config user.email shivam.rathore010@gmail.com
