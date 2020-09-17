@@ -264,13 +264,16 @@ characters is "bcb".
 
 Problem #014
 ------------
+This problem was asked by Google.
 
+The area of a circle is defined as πr^2. Estimate π to 3 decimal places using a
+Monte Carlo method.
+
+Hint: The basic equation of a circle is x2 + y2 = r2.
 
 **Solution(s)**:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](014/code.cpp)<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    • [Python](014/code.py)<br>
 
 
 Problem #015
