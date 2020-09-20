@@ -12,10 +12,6 @@ _Starting from September 03, 2020_
 _Want to join me? or Just need to stay upto date? <br>
 **Start watching the repository.**_
 
-**Next problem: 
-&nbsp; `#018`**
-<br>
-
 
 Problem: &nbsp;`#001`
 ------------
@@ -364,6 +360,30 @@ The name of a directory or sub-directory will not contain a period.
 **Solution(s)**:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](017/code.cpp)<br>
+
+
+Problem: &nbsp;`#018`
+------------
+This problem was asked by Google.
+
+Given an array of integers and a number k, where `1 <= k <= length` of the
+array, compute the maximum values of each subarray of length k.
+
+For example, given `array = [10, 5, 2, 7, 8, 7]` and `k = 3`, we should get:
+`[10, 7, 8, 8]`, since:
+
+    10 = max(10, 5, 2)
+    7 = max(5, 2, 7)
+    8 = max(2, 7, 8)
+    8 = max(7, 8, 7)
+
+Do this in `O(n)` time and `O(k)` space. You can modify the input array in-place
+and you do not need to store the results. You can simply print them out as you
+compute them.
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](018/code.cpp)<br>
 
 
 
