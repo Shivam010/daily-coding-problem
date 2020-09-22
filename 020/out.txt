@@ -1,1 +1,3 @@
-
+Interects at value: 8, pointor0x7fdea3405a30
+Interects at value: 1, pointor0x7fdea3405b00
+Both list never intersects
