@@ -12,10 +12,6 @@ _Starting from September 03, 2020_
 _Want to join me? or Just need to stay upto date? <br>
 **Start watching the repository.**_
 
-**Next problem: 
-&nbsp; `#021`**
-<br>
-
 
 Problem: &nbsp;`#001`
 ------------
@@ -426,6 +422,20 @@ constant space.
 **Solution(s)**:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](020/code.cpp)<br>
+
+
+Problem: &nbsp;`#021`
+------------
+This problem was asked by Snapchat.
+
+Given an array of time intervals (start, end) for classroom lectures (possibly
+overlapping), find the minimum number of rooms required.
+
+For example, given [(30, 75), (0, 50), (60, 150)], you should return 2.
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](021/code.cpp)<br>
 
 
 
