@@ -1,1 +1,20 @@
+6
+4
+thequick brown the fox
+thequickbrownfox
+5
+thequick brown the fox quick
+thequickbrownfox
+5
+bed bath bedbath and beyond
+bedbathandbeyond
+5
+a b c d e
+dccae
+5
+a b c d e
+qabcd
+4
+this is shivam rathore
+rathoreisshivamthis
 
