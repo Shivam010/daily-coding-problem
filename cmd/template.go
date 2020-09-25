@@ -11,6 +11,7 @@ var (
 	dotPyTmpl  = template.Must(template.ParseFiles(path.Join("cmd", "py.gotxt")))
 	dotCppTmpl = template.Must(template.ParseFiles(path.Join("cmd", "cpp.gotxt")))
 	readmeTmpl = template.Must(template.ParseFiles(path.Join("cmd", "readme.gomd")))
+	problemTmpl = template.Must(template.ParseFiles(path.Join("cmd", "problem.gomd")))
 )
 
 func createCpp(name string) error {
@@ -80,5 +81,6 @@ func updateReadme(data *Data) error {
 	if err != nil {
 		return err
 	}
+
 	return readmeTmpl.Execute(file, data)
 }

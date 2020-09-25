@@ -1,35 +1,3 @@
-Daily Coding Problem
-====================
-[![Script](https://github.com/Shivam010/daily-coding-problem/workflows/Script/badge.svg)](https://github.com/Shivam010/daily-coding-problem/actions?query=workflow%3AScript)
-[![Cron](https://github.com/Shivam010/daily-coding-problem/workflows/Cron/badge.svg)](https://github.com/Shivam010/daily-coding-problem/actions?query=workflow%3ACron)
-[![Greetings](https://github.com/Shivam010/daily-coding-problem/workflows/Greetings/badge.svg)](https://github.com/Shivam010/daily-coding-problem/actions?query=workflow%3AGreetings)
-
-Solving one problem every day.
-Problem selection is done by the [Daily Coding Problem](https://www.dailycodingproblem.com/) initiative.
-
-_Starting from September 03, 2020, I have solved {{len .Problems}} problems._<br>
-You can find the problems in their respective directories.
-
-_Want to join me? or Just need to stay upto date? <br>
-**Start watching the repository.**_
-
-{{- if len .Unsolved }}
-
-**Next problem:
-&nbsp; `#{{ call .Last .Unsolved }}`**
-<br>
-{{- $missed := call .Missed .Unsolved -}}
-{{ if len $missed }}
-**Missed problems:
-&nbsp; `#{{ index $missed 0 }}`
-
-{{- range slice $missed 1 }}
-&nbsp; • &nbsp; `#{{.}}`
-{{- end -}}**
-
-{{- end -}}
-{{- end }}
-
 {{ define "solutions" -}}
 **Solution(s)**:<br>
 {{- range . }}
@@ -47,10 +15,7 @@ Problem: &nbsp;`#{{.Number}}`
 
 {{ end -}}
 
-
-{{- range .Problems}}
-{{template "problem" .}}
-{{- end }}
+{{- template "problem" .}}
 
 ![]()
 -----
