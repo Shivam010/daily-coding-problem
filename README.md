@@ -12,10 +12,6 @@ _Starting from September 03, 2020_
 _Want to join me? or Just need to stay upto date? <br>
 **Start watching the repository.**_
 
-**Next problem: 
-&nbsp; `#023`**
-<br>
-
 
 Problem: &nbsp;`#001`
 ------------
@@ -461,6 +457,43 @@ Given the set of words 'bed', 'bath', 'bedbath', 'and', 'beyond', and the string
 **Solution(s)**:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](022/code.cpp)<br>
+
+
+Problem: &nbsp;`#023`
+------------
+This problem was asked by Google.
+
+You are given an `M by N` matrix consisting of booleans that represents a board.
+Each True boolean represents a wall. Each False boolean represents a tile you
+can walk on.
+
+Given this matrix, a start coordinate, and an end coordinate, return the minimum
+number of steps required to reach the end coordinate from the start. If there is
+no possible path, then return null. You can move up, left, down, and right. You
+cannot move through walls. You cannot wrap around the edges of the board.
+
+For example, given the following board:
+
+```
+[[f, f, f, f],
+[t, t, f, t],
+[f, f, f, f],
+[f, f, f, f]]
+```
+ 0  1  2  3
+ 4  5  6  7
+ 8  9 10 11
+12 13 14 15
+
+and start = (3, 0) (bottom left) and end = (0, 0) (top left), the minimum number
+of steps required to reach the end is 7, since we would need to go through (1,
+2) because there is a wall everywhere else on the second row.
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](023/code.cpp)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [Python](023/code.py)<br>
 
 
 
