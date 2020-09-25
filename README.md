@@ -7,7 +7,8 @@ Daily Coding Problem
 Solving one problem every day.
 Problem selection is done by the [Daily Coding Problem](https://www.dailycodingproblem.com/) initiative.
 
-_Starting from September 03, 2020_
+_Starting from September 03, 2020, I have solved 23 problems._<br>
+You can find the problems in their respective directories.
 
 _Want to join me? or Just need to stay upto date? <br>
 **Start watching the repository.**_
@@ -492,8 +493,6 @@ of steps required to reach the end is 7, since we would need to go through (1,
 **Solution(s)**:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](023/code.cpp)<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    • [Python](023/code.py)<br>
 
 
 
