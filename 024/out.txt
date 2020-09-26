@@ -1,1 +1,86 @@
-
+			10
+		8
+			9
+				17
+	3
+		7
+0
+		4
+				14
+					16
+						19
+			6
+				13
+					15
+	2
+		1
+				12
+			5
+				11
+					18
+						20
+lock 6 true
+is_locked 6 true
+lock 13 (already locked due to: 6 is_locked:true leftLocks:0 rightLocks:0) false
+is_locked 13 false
+unlock 13 false
+lock 16 (already locked due to: 6 is_locked:true leftLocks:0 rightLocks:0) false
+is_locked 16 false
+unlock 6 true
+lock 13 true
+lock 14 true
+is_locked 13 true
+is_locked 14 true
+lock 4 (already locked due to: 4 is_locked:false leftLocks:2 rightLocks:0) false
+is_locked 4 false
+lock 1 true
+is_locked 1 true
+lock 1 (already locked due to: 1 is_locked:true leftLocks:0 rightLocks:0) false
+is_locked 1 true
+unlock 14 true
+lock 15 (already locked due to: 13 is_locked:true leftLocks:0 rightLocks:0) false
+unlock 13 true
+lock 15 true
+lock 6 (already locked due to: 6 is_locked:false leftLocks:1 rightLocks:0) false
+unlock 6 false
+lock 0 (already locked due to: 0 is_locked:false leftLocks:2 rightLocks:0) false
+unlock 1 true
+lock 0 (already locked due to: 0 is_locked:false leftLocks:1 rightLocks:0) false
+unlock 15 true
+lock 0 true
+lock 2 (already locked due to: 0 is_locked:true leftLocks:0 rightLocks:0) false
+unlock 0 true
+lock 2 true
+lock 7 true
+is_locked 2 true
+is_locked 7 true
+lock 18 (already locked due to: 2 is_locked:true leftLocks:0 rightLocks:0) false
+lock 19 (already locked due to: 2 is_locked:true leftLocks:0 rightLocks:0) false
+unlock 2 true
+lock 19 true
+lock 18 true
+lock 20 (already locked due to: 18 is_locked:true leftLocks:0 rightLocks:0) false
+is_locked 20 false
+is_locked 18 true
+is_locked 19 true
+lock 13 true
+is_locked 13 true
+lock 9 true
+is_locked 9 true
+unlock 13 true
+lock 10 true
+is_locked 10 true
+unlock 9 true
+unlock 10 true
+unlock 7 true
+lock 3 true
+is_locked 3 true
+lock 0 (already locked due to: 0 is_locked:false leftLocks:2 rightLocks:1) false
+is_locked 0 false
+unlock 3 true
+lock 0 (already locked due to: 0 is_locked:false leftLocks:2 rightLocks:0) false
+unlock 19 true
+lock 0 (already locked due to: 0 is_locked:false leftLocks:1 rightLocks:0) false
+unlock 18 true
+lock 0 true
+is_locked 0 true

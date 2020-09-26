@@ -20,10 +20,6 @@ For example, given the following board:
 [f, f, f, f],
 [f, f, f, f]]
 ```
- 0  1  2  3
- 4  5  6  7
- 8  9 10 11
-12 13 14 15
 
 and start = (3, 0) (bottom left) and end = (0, 0) (top left), the minimum number
 of steps required to reach the end is 7, since we would need to go through (1,
