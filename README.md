@@ -7,15 +7,11 @@ Daily Coding Problem
 Solving one problem every day.
 Problem selection is done by the [Daily Coding Problem](https://www.dailycodingproblem.com/) initiative.
 
-_Starting from September 03, 2020, I have solved 23 problems._<br>
+_Starting from September 03, 2020, I have solved 24 problems._<br>
 You can find the problems in their respective directories.
 
 _Want to join me? or Just need to stay upto date? <br>
 **Start watching the repository.**_
-
-**Next problem:
-&nbsp; `#024`**
-<br>
 
 
 Problem: &nbsp;`#001`
@@ -485,10 +481,6 @@ For example, given the following board:
 [f, f, f, f],
 [f, f, f, f]]
 ```
- 0  1  2  3
- 4  5  6  7
- 8  9 10 11
-12 13 14 15
 
 and start = (3, 0) (bottom left) and end = (0, 0) (top left), the minimum number
 of steps required to reach the end is 7, since we would need to go through (1,
@@ -497,6 +489,31 @@ of steps required to reach the end is 7, since we would need to go through (1,
 **Solution(s)**:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](023/code.cpp)<br>
+
+
+Problem: &nbsp;`#024`
+------------
+This problem was asked by Google.
+
+Implement locking in a binary tree. A binary tree node can be locked or unlocked
+only if all of its descendants or ancestors are not locked.
+
+Design a binary tree node class with the following methods:
+
+- `is_locked`, which returns whether the node is locked.
+- `lock`, which attempts to lock the node. If it cannot be locked, then it
+should return false. Otherwise, it should lock it and return true.
+- `unlock`, which unlocks the node. If it cannot be unlocked, then it should
+return false. Otherwise, it should unlock it and return true.
+
+You may augment the node to add parent pointers or any other property you would
+like. You may assume the class is used in a single-threaded program, so there is
+no need for actual locks or mutexes. Each method should run in `O(h)`, where `h`
+is the height of the tree.
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](024/code.cpp)<br>
 
 
 
