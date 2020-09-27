@@ -7,15 +7,11 @@ Daily Coding Problem
 Solving one problem every day.
 Problem selection is done by the [Daily Coding Problem](https://www.dailycodingproblem.com/) initiative.
 
-_Starting from September 03, 2020, I have solved 24 problems._<br>
+_Starting from September 03, 2020, I have solved 25 problems._<br>
 You can find the problems in their respective directories.
 
 _Want to join me? or Just need to stay upto date? <br>
 **Start watching the repository.**_
-
-**Next problem:
-&nbsp; `#025`**
-<br>
 
 
 Problem: &nbsp;`#001`
@@ -518,6 +514,31 @@ is the height of the tree.
 **Solution(s)**:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](024/code.cpp)<br>
+
+
+Problem: &nbsp;`#025`
+------------
+This problem was asked by Facebook.
+
+Implement regular expression matching with the following special characters:
+
+> `.` (period) which matches any single character
+> `*` (asterisk) which matches zero or more of the preceding element
+
+That is, implement a function that takes in a string and a valid regular
+expression and returns whether or not the string matches the regular expression.
+
+For example, given the regular expression "ra." and the string "ray", your
+function should return true. The same regular expression on the string "raymond"
+should return false.
+
+Given the regular expression ".*at" and the string "chat", your function should
+return true. The same regular expression on the string "chats" should return
+false.
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](025/code.cpp)<br>
 
 
 
