@@ -1,1 +1,20 @@
-
+ray ::  valid for  :: ray
+ray ::  valid for  :: ra.
+raymond :: invalid for :: ra.
+rama :: invalid for :: ra.
+rama ::  valid for  :: ra..
+eat :: invalid for :: a*t
+eat ::  valid for  :: .*at
+chat ::  valid for  :: .*at
+chats :: invalid for :: .*at
+chattergiat ::  valid for  :: .*at
+raa ::  valid for  :: ra*.
+ram ::  valid for  :: ra*.
+r :: invalid for :: ra*.
+ra ::  valid for  :: ra*.
+chats ::  valid for  :: .*at.
+aa :: invalid for :: a
+a ::  valid for  :: a*a
+aaa ::  valid for  :: a*a
+ab :: invalid for :: a*a
+- ::  valid for  :: .*

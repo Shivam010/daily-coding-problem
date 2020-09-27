@@ -1,1 +1,22 @@
+20
+ray ray
+ray ra.
+raymond ra.
+rama ra.
+rama ra..
+eat a*t
+eat .*at
+chat .*at
+chats .*at
+chattergiat .*at
+raa ra*.
+ram ra*.
+r ra*.
+ra ra*.
+chats .*at.
+aa a
+a a*a
+aaa a*a
+ab a*a
+-  .*
 
