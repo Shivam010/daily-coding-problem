@@ -1,1 +1,22 @@
-
+1->2->3->4->5->6->7->8->9->10->11->12->13->14->15
+Last 1 th item:: 15
+   After Removing:: 1->2->3->4->5->6->7->8->9->10->11->12->13->14
+Last 14 th item:: 1
+   After Removing:: 2->3->4->5->6->7->8->9->10->11->12->13->14
+Last 2 th item:: 13
+   After Removing:: 2->3->4->5->6->7->8->9->10->11->12->14
+Last 6 th item:: 8
+   After Removing:: 2->3->4->5->6->7->9->10->11->12->14
+Last 3 th item:: 11
+   After Removing:: 2->3->4->5->6->7->9->10->12->14
+Last 5 th item:: 7
+   After Removing:: 2->3->4->5->6->9->10->12->14
+Done
+9->10->11->12
+Last 3 th item:: 10
+   After Removing:: 9->11->12
+Last 3 th item:: 9
+   After Removing:: 11->12
+Last 1 th item:: 12
+   After Removing:: 11
+Done
