@@ -7,15 +7,11 @@ Daily Coding Problem
 Solving one problem every day.
 Problem selection is done by the [Daily Coding Problem](https://www.dailycodingproblem.com/) initiative.
 
-_Starting from September 03, 2020, I have solved 25 problems._<br>
+_Starting from September 03, 2020, I have solved 26 problems._<br>
 You can find the problems in their respective directories.
 
 _Want to join me? or Just need to stay upto date? <br>
 **Start watching the repository.**_
-
-**Next problem:
-&nbsp; `#026`**
-<br>
 
 
 Problem: &nbsp;`#001`
@@ -543,6 +539,22 @@ false.
 **Solution(s)**:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](025/code.cpp)<br>
+
+
+Problem: &nbsp;`#026`
+------------
+This problem was asked by Google.
+
+Given a singly linked list and an integer k, remove the kth last element from
+the list. k is guaranteed to be smaller than the length of the list.
+
+The list is very long, so making more than one pass is prohibitively expensive.
+
+Do this in constant space and in one pass.
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](026/code.cpp)<br>
 
 
 
