@@ -1,1 +1,22 @@
-
+16
+"the  quick brown"
+"fox  jumps  over"
+"the   lazy   dog"
+2
+"as"
+"sd"
+5
+"it is"
+"very "
+"nice "
+"of   "
+"you  "
+10
+"why    are"
+"you  doing"
+"these   to"
+"us        "
+100
+"this            problem            was            very           simple           to           solve"
+10
+"Ten       "
