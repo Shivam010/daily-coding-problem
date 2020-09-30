@@ -7,15 +7,11 @@ Daily Coding Problem
 Solving one problem every day.
 Problem selection is done by the [Daily Coding Problem](https://www.dailycodingproblem.com/) initiative.
 
-_Starting from September 03, 2020, I have solved 27 problems._<br>
+_Starting from September 03, 2020, I have solved 28 problems._<br>
 You can find the problems in their respective directories.
 
 _Want to join me? or Just need to stay upto date? <br>
 **Start watching the repository.**_
-
-**Next problem:
-&nbsp; `#027`**
-<br>
 
 
 Problem: &nbsp;`#001`
@@ -559,6 +555,22 @@ Do this in constant space and in one pass.
 **Solution(s)**:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](026/code.cpp)<br>
+
+
+Problem: &nbsp;`#027`
+------------
+This problem was asked by Facebook.
+
+Given a string of round, curly, and square open and closing brackets, return
+whether the brackets are balanced (well-formed).
+
+For example, given the string `"([])[]({})"`, you should return true.
+
+Given the string `"([)]"` or `"((()"`, you should return false.
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](027/code.cpp)<br>
 
 
 Problem: &nbsp;`#028`
