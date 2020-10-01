@@ -1,1 +1,9 @@
-
+8
+enc AAAABBBCCDAA
+dec 4A3B2C1D2A
+enc QWERFDSASRW
+dec 1q2e2r1c
+enc aaaaaaaaaaaaaaaaaaaaaaaaaaa
+dec 10p
+dec 1o2p3f9k
+enc oppfffkkkkkkkkk

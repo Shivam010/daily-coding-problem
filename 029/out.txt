@@ -1,1 +1,8 @@
-
+AAAABBBCCDAA ::enc:: 4A3B2C1D2A
+4A3B2C1D2A ::dec:: AAAABBBCCDAA
+QWERFDSASRW ::enc:: 1Q1W1E1R1F1D1S1A1S1R1W
+1q2e2r1c ::dec:: qeerrc
+aaaaaaaaaaaaaaaaaaaaaaaaaaa ::enc:: 27a
+10p ::dec:: pppppppppp
+1o2p3f9k ::dec:: oppfffkkkkkkkkk
+oppfffkkkkkkkkk ::enc:: 1o2p3f9k
