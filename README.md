@@ -7,15 +7,11 @@ Daily Coding Problem
 Solving one problem every day.
 Problem selection is done by the [Daily Coding Problem](https://www.dailycodingproblem.com/) initiative.
 
-_Starting from September 03, 2020, I have solved 28 problems._<br>
+_Starting from September 03, 2020, I have solved 29 problems._<br>
 You can find the problems in their respective directories.
 
 _Want to join me? or Just need to stay upto date? <br>
 **Start watching the repository.**_
-
-**Next problem:
-&nbsp; `#029`**
-<br>
 
 
 Problem: &nbsp;`#001`
@@ -607,6 +603,24 @@ For example, given the list of words `["the", "quick", "brown", "fox", "jumps",
 **Solution(s)**:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](028/code.cpp)<br>
+
+
+Problem: &nbsp;`#029`
+------------
+This problem was asked by Amazon.
+
+Run-length encoding is a fast and simple method of encoding strings. The basic
+idea is to represent repeated successive characters as a single count and
+character. For example, the string `"AAAABBBCCDAA"` would be encoded as
+`"4A3B2C1D2A"`.
+
+Implement run-length encoding and decoding. You can assume the string to be
+encoded have no digits and consists solely of alphabetic characters. You can
+assume the string to be decoded is valid.
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](029/code.cpp)<br>
 
 
 
