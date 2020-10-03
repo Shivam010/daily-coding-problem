@@ -14,8 +14,10 @@ _Want to join me? or Just need to stay upto date? <br>
 **Start watching the repository.**_
 
 **Next problem:
-&nbsp; `#030`**
+&nbsp; `#031`**
 <br>
+**Missed problems:
+&nbsp; `#030`**
 
 
 Problem: &nbsp;`#001`
