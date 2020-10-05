@@ -7,15 +7,11 @@ Daily Coding Problem
 Solving one problem every day.
 Problem selection is done by the [Daily Coding Problem](https://www.dailycodingproblem.com/) initiative.
 
-_Starting from September 03, 2020, I have solved 32 problems._<br>
+_Starting from September 03, 2020, I have solved 33 problems._<br>
 You can find the problems in their respective directories.
 
 _Want to join me? or Just need to stay upto date? <br>
 **Start watching the repository.**_
-
-**Next problem:
-&nbsp; `#033`**
-<br>
 
 
 Problem: &nbsp;`#001`
@@ -695,6 +691,34 @@ b-c 2b - 10c
 **Solution(s)**:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](032/code.cpp)<br>
+
+
+Problem: &nbsp;`#033`
+------------
+This problem was asked by Microsoft.
+
+Compute the running median of a sequence of numbers. That is, given a stream of
+numbers, print out the median of the list so far on each new element.
+
+Recall that the median of an even-numbered list is the average of the two middle
+numbers.
+
+For example, given the sequence `[2, 1, 5, 7, 2, 0, 5]`, your algorithm should
+print out:
+
+```
+2
+1.5
+2
+3.5
+2
+2
+2
+```
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](033/code.cpp)<br>
 
 
 
