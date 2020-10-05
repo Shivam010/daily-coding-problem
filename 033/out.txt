@@ -1,1 +1,14 @@
-
+-> 2
+	median: 2
+-> 1
+	median: 1.5
+-> 5
+	median: 2
+-> 7
+	median: 3.5
+-> 2
+	median: 2
+-> 0
+	median: 2
+-> 5
+	median: 2
