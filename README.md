@@ -7,7 +7,7 @@ Daily Coding Problem
 Solving one problem every day.
 Problem selection is done by the [Daily Coding Problem](https://www.dailycodingproblem.com/) initiative.
 
-_Starting from September 03, 2020, I have solved 33 problems._<br>
+_Starting from September 03, 2020, I have solved 34 problems._<br>
 You can find the problems in their respective directories.
 
 _Want to join me? or Just need to stay upto date? <br>
@@ -16,8 +16,6 @@ _Want to join me? or Just need to stay upto date? <br>
 **Next problem:
 &nbsp; `#035`**
 <br>
-**Missed problems:
-&nbsp; `#034`**
 
 
 Problem: &nbsp;`#001`
@@ -725,6 +723,27 @@ print out:
 **Solution(s)**:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](033/code.cpp)<br>
+
+
+Problem: &nbsp;`#034`
+------------
+This problem was asked by Quora.
+
+Given a string, find the palindrome that can be made by inserting the fewest
+number of characters as possible anywhere in the word. If there is more than one
+palindrome of minimum length that can be made, return the lexicographically
+earliest one (the first one alphabetically).
+
+For example, given the string "race", you should return "ecarace", since we can
+add three letters to it (which is the smallest amount to make a palindrome).
+There are seven other palindromes that can be made from "race" by adding three
+letters, but "ecarace" comes first alphabetically.
+
+As another example, given the string "google", you should return "elgoogle".
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](034/code.cpp)<br>
 
 
 
