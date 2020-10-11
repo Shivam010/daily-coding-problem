@@ -7,7 +7,7 @@ Daily Coding Problem
 Solving one problem every day.
 Problem selection is done by the [Daily Coding Problem](https://www.dailycodingproblem.com/) initiative.
 
-_Starting from September 03, 2020, I have solved 34 problems._<br>
+_Starting from September 03, 2020, I have solved 37 problems._<br>
 You can find the problems in their respective directories.
 
 _Want to join me? or Just need to stay upto date? <br>
@@ -17,10 +17,7 @@ _Want to join me? or Just need to stay upto date? <br>
 &nbsp; `#039`**
 <br>
 **Missed problems:
-&nbsp; `#035`
-&nbsp; • &nbsp; `#036`
-&nbsp; • &nbsp; `#037`
-&nbsp; • &nbsp; `#038`**
+&nbsp; `#038`**
 
 
 Problem: &nbsp;`#001`
@@ -749,6 +746,53 @@ As another example, given the string "google", you should return "elgoogle".
 **Solution(s)**:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](034/code.cpp)<br>
+
+
+Problem: &nbsp;`#035`
+------------
+This problem was asked by Google.
+
+Given an array of strictly the characters 'R', 'G', and 'B', segregate the
+values of the array so that all the Rs come first, the Gs come second, and the
+Bs come last. You can only swap elements of the array.
+
+Do this in linear time and in-place.
+
+For example, given the array ['G', 'B', 'R', 'R', 'B', 'R', 'G'], it should
+become ['R', 'R', 'R', 'G', 'G', 'B', 'B'].
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](035/code.cpp)<br>
+
+
+Problem: &nbsp;`#036`
+------------
+This problem was asked by Dropbox.
+
+Given the root to a binary search tree, find the second largest node in the
+tree.
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](036/code.cpp)<br>
+
+
+Problem: &nbsp;`#037`
+------------
+This problem was asked by Google.
+
+The power set of a set is the set of all its subsets. Write a function that,
+given a set, generates its power set.
+
+For example, given the set `{1, 2, 3}`, it should return `{{}, {1}, {2}, {3},
+{1, 2}, {1, 3}, {2, 3}, {1, 2, 3}}`
+
+You may also use a list or array to represent a set.
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](037/code.cpp)<br>
 
 
 
