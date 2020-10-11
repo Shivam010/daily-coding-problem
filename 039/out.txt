@@ -1,1 +1,113 @@
+Initial state 0
+---------------
+First cell: 0 1
+Last cell: 3 4
+   1 2 3 4 
+ 0 . * . . 
+ 1 * . . . 
+ 2 . * . . 
+ 3 * . . * 
+
+After Step 1
+First cell: 1 1
+Last cell: 2 2
+   1 2 
+ 1 * * 
+ 2 * * 
+
+After Step 2
+First cell: 1 1
+Last cell: 2 2
+   1 2 
+ 1 * * 
+ 2 * * 
+
+After Step 3
+First cell: 1 1
+Last cell: 2 2
+   1 2 
+ 1 * * 
+ 2 * * 
+
+Initial state 0
+---------------
+First cell: -1 0
+Last cell: 2 2
+   0 1 2 
+-1 . * . 
+ 0 * . * 
+ 1 * . * 
+ 2 . * . 
+
+After Step 1
+First cell: -1 0
+Last cell: 2 2
+   0 1 2 
+-1 . * . 
+ 0 * . * 
+ 1 * . * 
+ 2 . * . 
+
+After Step 2
+First cell: -1 0
+Last cell: 2 2
+   0 1 2 
+-1 . * . 
+ 0 * . * 
+ 1 * . * 
+ 2 . * . 
+
+After Step 3
+First cell: -1 0
+Last cell: 2 2
+   0 1 2 
+-1 . * . 
+ 0 * . * 
+ 1 * . * 
+ 2 . * . 
+
+Initial state 0
+---------------
+First cell: 0 1
+Last cell: 3 2
+   1 2 
+ 0 . * 
+ 1 * . 
+ 2 . * 
+ 3 * * 
+
+After Step 1
+First cell: 1 1
+Last cell: 3 2
+   1 2 
+ 1 * * 
+ 2 . * 
+ 3 * * 
+
+After Step 2
+First cell: 1 1
+Last cell: 3 3
+   1 2 3 
+ 1 * * . 
+ 2 . . * 
+ 3 * * . 
+
+After Step 3
+First cell: 1 2
+Last cell: 3 3
+   2 3 
+ 1 * . 
+ 2 . * 
+ 3 * . 
+
+After Step 4
+First cell: 2 2
+Last cell: 2 3
+   2 3 
+ 2 * * 
+
+After Step 5
+First cell: 0 0
+Last cell: 0 0
+.
 
