@@ -7,7 +7,7 @@ Daily Coding Problem
 Solving one problem every day.
 Problem selection is done by the [Daily Coding Problem](https://www.dailycodingproblem.com/) initiative.
 
-_Starting from September 03, 2020, I have solved 37 problems._<br>
+_Starting from September 03, 2020, I have solved 38 problems._<br>
 You can find the problems in their respective directories.
 
 _Want to join me? or Just need to stay upto date? <br>
@@ -16,8 +16,6 @@ _Want to join me? or Just need to stay upto date? <br>
 **Next problem:
 &nbsp; `#039`**
 <br>
-**Missed problems:
-&nbsp; `#038`**
 
 
 Problem: &nbsp;`#001`
@@ -793,6 +791,20 @@ You may also use a list or array to represent a set.
 **Solution(s)**:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](037/code.cpp)<br>
+
+
+Problem: &nbsp;`#038`
+------------
+This problem was asked by Microsoft.
+
+You have an N by N board. Write a function that, given N, returns the number of
+possible arrangements of the board where N queens can be placed on the board
+without threatening each other, i.e. no two queens share the same row, column,
+or diagonal.
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](038/code.cpp)<br>
 
 
 
