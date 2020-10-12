@@ -7,15 +7,11 @@ Daily Coding Problem
 Solving one problem every day.
 Problem selection is done by the [Daily Coding Problem](https://www.dailycodingproblem.com/) initiative.
 
-_Starting from September 03, 2020, I have solved 39 problems._<br>
+_Starting from September 03, 2020, I have solved 40 problems._<br>
 You can find the problems in their respective directories.
 
 _Want to join me? or Just need to stay upto date? <br>
 **Start watching the repository.**_
-
-**Next problem:
-&nbsp; `#040`**
-<br>
 
 
 Problem: &nbsp;`#001`
@@ -834,6 +830,23 @@ You can represent a live cell with an asterisk `(*)` and a dead cell with a dot
 **Solution(s)**:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](039/code.cpp)<br>
+
+
+Problem: &nbsp;`#040`
+------------
+This problem was asked by Google.
+
+Given an array of integers where every integer occurs three times except for one
+integer, which only occurs once, find and return the non-duplicated integer.
+
+For example, given [6, 1, 3, 3, 3, 6, 6], return 1. Given [13, 19, 13, 13],
+return 19.
+
+Do this in O(N) time and O(1) space.
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](040/code.cpp)<br>
 
 
 
