@@ -1,1 +1,30 @@
-
+5
+4
+SFO HKO
+YYZ SFO
+YUL YYZ
+HKO ORD
+YUL
+2
+SFO COM
+COM YYZ
+COM
+4
+A B
+A C
+B C
+C A
+A
+4
+C B
+C A
+B A
+A C
+C
+5
+1 2
+2 3
+3 2
+1 4
+2 4
+1
