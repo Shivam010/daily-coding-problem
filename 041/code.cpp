@@ -29,15 +29,16 @@ g++ 041/code.cpp -o bin/out && ./bin/out < 041/in.txt > 041/out.txt
 using namespace std;
 
 bool backtrack(int n, int noUsed, pair<string, string> *list, bool *used,
-               string *it, string last) {
+               string *it) {
     if (noUsed == n) return true;
     for (int i = 0; i < n; i++) {
         if (used[i]) continue;
-        if (last == list[i].first) {
+        if (it[noUsed] == list[i].first) {
             used[i] = true;
             it[++noUsed] = list[i].second;
-            if (backtrack(n, noUsed, list, used, it, list[i].second))
-                return true;
+            if (backtrack(n, noUsed, list, used, it)) return true;
+            noUsed--;
+            used[i] = false;
         }
     }
 
@@ -54,12 +55,11 @@ void solve() {
         used[i] = false;
     }
     sort(list, list + n);
-    string start;
-    cin >> start;
-    string it[n+1];
-    it[0] = start;
-    if (backtrack(n, 0, list, used, it, start))
-        for (int i = 0; i <=n; i++) cout << it[i] << " ";
+
+    string it[n + 1];
+    cin >> it[0];
+    if (backtrack(n, 0, list, used, it))
+        for (int i = 0; i <= n; i++) cout << it[i] << " ";
     else
         cout << -1;
     cout << endl;
