@@ -7,15 +7,11 @@ Daily Coding Problem
 Solving one problem every day.
 Problem selection is done by the [Daily Coding Problem](https://www.dailycodingproblem.com/) initiative.
 
-_Starting from September 03, 2020, I have solved 41 problems._<br>
+_Starting from September 03, 2020, I have solved 42 problems._<br>
 You can find the problems in their respective directories.
 
 _Want to join me? or Just need to stay upto date? <br>
 **Start watching the repository.**_
-
-**Next problem:
-&nbsp; `#042`**
-<br>
 
 
 Problem: &nbsp;`#001`
@@ -878,6 +874,25 @@ one is lexicographically smaller.
 **Solution(s)**:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](041/code.cpp)<br>
+
+
+Problem: &nbsp;`#042`
+------------
+This problem was asked by Google.
+
+Given a list of integers S and a target number k, write a function that returns
+a subset of S that adds up to k. If such a subset cannot be made, then return
+null.
+
+Integers can appear more than once in the list. You may assume all numbers in
+the list are positive.
+
+For example, given S = [12, 1, 61, 5, 9, 2] and k = 24, return [12, 9, 2, 1]
+since it sums up to 24.
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](042/code.cpp)<br>
 
 
 
