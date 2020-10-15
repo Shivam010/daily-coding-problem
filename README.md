@@ -7,15 +7,11 @@ Daily Coding Problem
 Solving one problem every day.
 Problem selection is done by the [Daily Coding Problem](https://www.dailycodingproblem.com/) initiative.
 
-_Starting from September 03, 2020, I have solved 42 problems._<br>
+_Starting from September 03, 2020, I have solved 43 problems._<br>
 You can find the problems in their respective directories.
 
 _Want to join me? or Just need to stay upto date? <br>
 **Start watching the repository.**_
-
-**Next problem:
-&nbsp; `#043`**
-<br>
 
 
 Problem: &nbsp;`#001`
@@ -897,6 +893,25 @@ since it sums up to 24.
 **Solution(s)**:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](042/code.cpp)<br>
+
+
+Problem: &nbsp;`#043`
+------------
+This problem was asked by Amazon.
+
+Implement a stack that has the following methods:
+
+- `push(val)`, which pushes an element onto the stack
+- `pop()`, which pops off and returns the topmost element of the stack. If there
+are no elements in the stack, then it should throw an error or return null.
+- `max()`, which returns the maximum value in the stack currently. If there are
+no elements in the stack, then it should throw an error or return null.
+
+Each method should run in constant time.
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](043/code.cpp)<br>
 
 
 
