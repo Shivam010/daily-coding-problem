@@ -1,1 +1,26 @@
-
+25
+push 1
+max 
+push 2
+max
+push 6
+max
+push 1
+max
+push -1
+max
+pop
+max 
+push 7
+max
+pop
+max
+pop
+max
+pop
+max
+pop
+max
+pop
+max
+pop
