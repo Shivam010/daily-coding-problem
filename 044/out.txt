@@ -1,1 +1,6 @@
-
+usingBIT :: 3	 usingMergeSort :: 3
+usingBIT :: 10	 usingMergeSort :: 10
+usingBIT :: 5	 usingMergeSort :: 5
+usingBIT :: 7	 usingMergeSort :: 4
+usingBIT :: 0	 usingMergeSort :: 0
+usingBIT :: 0	 usingMergeSort :: 0
