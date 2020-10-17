@@ -7,15 +7,11 @@ Daily Coding Problem
 Solving one problem every day.
 Problem selection is done by the [Daily Coding Problem](https://www.dailycodingproblem.com/) initiative.
 
-_Starting from September 03, 2020, I have solved 44 problems._<br>
+_Starting from September 03, 2020, I have solved 45 problems._<br>
 You can find the problems in their respective directories.
 
 _Want to join me? or Just need to stay upto date? <br>
 **Start watching the repository.**_
-
-**Next problem:
-&nbsp; `#045`**
-<br>
 
 
 Problem: &nbsp;`#001`
@@ -938,6 +934,19 @@ has ten inversions: every distinct pair forms an inversion.
 **Solution(s)**:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](044/code.cpp)<br>
+
+
+Problem: &nbsp;`#045`
+------------
+This problem was asked by Two Sigma.
+
+Using a function `rand5()` that returns an integer from `1 to 5 (inclusive)`
+with uniform probability, implement a function `rand7()` that returns an integer
+from `1 to 7 (inclusive)`.
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](045/code.cpp)<br>
 
 
 
