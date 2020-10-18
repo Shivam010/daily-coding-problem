@@ -7,15 +7,11 @@ Daily Coding Problem
 Solving one problem every day.
 Problem selection is done by the [Daily Coding Problem](https://www.dailycodingproblem.com/) initiative.
 
-_Starting from September 03, 2020, I have solved 45 problems._<br>
+_Starting from September 03, 2020, I have solved 46 problems._<br>
 You can find the problems in their respective directories.
 
 _Want to join me? or Just need to stay upto date? <br>
 **Start watching the repository.**_
-
-**Next problem:
-&nbsp; `#046`**
-<br>
 
 
 Problem: &nbsp;`#001`
@@ -951,6 +947,21 @@ from `1 to 7 (inclusive)`.
 **Solution(s)**:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](045/code.cpp)<br>
+
+
+Problem: &nbsp;`#046`
+------------
+This problem was asked by Amazon.
+
+Given a string, find the longest palindromic contiguous substring. If there are
+more than one with the maximum length, return any one.
+
+For example, the longest palindromic substring of "aabcdcb" is "bcdcb". The
+longest palindromic substring of "bananas" is "anana".
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](046/code.cpp)<br>
 
 
 
