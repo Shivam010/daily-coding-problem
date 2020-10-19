@@ -1,1 +1,7 @@
-
+Profit: 5
+Profit: 4
+Profit: 0
+Profit: 1
+Profit: -1
+Profit: 25
+Profit: -1
