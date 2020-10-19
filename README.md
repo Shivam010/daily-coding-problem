@@ -7,15 +7,11 @@ Daily Coding Problem
 Solving one problem every day.
 Problem selection is done by the [Daily Coding Problem](https://www.dailycodingproblem.com/) initiative.
 
-_Starting from September 03, 2020, I have solved 46 problems._<br>
+_Starting from September 03, 2020, I have solved 47 problems._<br>
 You can find the problems in their respective directories.
 
 _Want to join me? or Just need to stay upto date? <br>
 **Start watching the repository.**_
-
-**Next problem:
-&nbsp; `#047`**
-<br>
 
 
 Problem: &nbsp;`#001`
@@ -966,6 +962,23 @@ longest palindromic substring of "bananas" is "anana".
 **Solution(s)**:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](046/code.cpp)<br>
+
+
+Problem: &nbsp;`#047`
+------------
+This problem was asked by Facebook.
+
+Given a array of numbers representing the stock prices of a company in
+chronological order, write a function that calculates the maximum profit you
+could have made from buying and selling that stock once. You must buy before you
+can sell it.
+
+For example, given [9, 11, 8, 5, 7, 10], you should return 5, since you could
+buy the stock at 5 dollars and sell it at 10 dollars.
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](047/code.cpp)<br>
 
 
 
