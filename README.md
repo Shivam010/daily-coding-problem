@@ -7,15 +7,11 @@ Daily Coding Problem
 Solving one problem every day.
 Problem selection is done by the [Daily Coding Problem](https://www.dailycodingproblem.com/) initiative.
 
-_Starting from September 03, 2020, I have solved 47 problems._<br>
+_Starting from September 03, 2020, I have solved 48 problems._<br>
 You can find the problems in their respective directories.
 
 _Want to join me? or Just need to stay upto date? <br>
 **Start watching the repository.**_
-
-**Next problem:
-&nbsp; `#048`**
-<br>
 
 
 Problem: &nbsp;`#001`
@@ -983,6 +979,35 @@ buy the stock at 5 dollars and sell it at 10 dollars.
 **Solution(s)**:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](047/code.cpp)<br>
+
+
+Problem: &nbsp;`#048`
+------------
+This problem was asked by Google.
+
+Given pre-order and in-order traversals of a binary tree, write a function to
+reconstruct the tree.
+
+For example, given the following preorder traversal:
+
+`[a, b, d, e, c, f, g]`
+
+And the following inorder traversal:
+
+`[d, b, e, a, f, c, g]`
+
+You should return the following tree:
+```
+    a
+   / \
+  b   c
+ / \ / \
+d  e f  g
+```
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](048/code.cpp)<br>
 
 
 
