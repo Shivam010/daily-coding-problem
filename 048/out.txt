@@ -1,1 +1,12 @@
-
+Yes
+Answer
+	 Preorder: abdecfg
+	 Inorder:: dbeafcg
+Yes
+Answer
+	 Preorder: abdc
+	 Inorder:: dbac
+Yes
+Answer
+	 Preorder: abdehcfkjgi
+	 Inorder:: dbheakfjcgi
