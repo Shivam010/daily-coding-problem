@@ -7,15 +7,11 @@ Daily Coding Problem
 Solving one problem every day.
 Problem selection is done by the [Daily Coding Problem](https://www.dailycodingproblem.com/) initiative.
 
-_Starting from September 03, 2020, I have solved 48 problems._<br>
+_Starting from September 03, 2020, I have solved 49 problems._<br>
 You can find the problems in their respective directories.
 
 _Want to join me? or Just need to stay upto date? <br>
 **Start watching the repository.**_
-
-**Next problem:
-&nbsp; `#049`**
-<br>
 
 
 Problem: &nbsp;`#001`
@@ -1012,6 +1008,26 @@ d  e f  g
 **Solution(s)**:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](048/code.cpp)<br>
+
+
+Problem: &nbsp;`#049`
+------------
+This problem was asked by Amazon.
+
+Given an array of numbers, find the maximum sum of any contiguous subarray of
+the array.
+
+For example, given the array `[34, -50, 42, 14, -5, 86]`, the maximum sum would
+be `137`, since we would take elements `42, 14, -5, and 86`.
+
+Given the array `[-5, -1, -8, -9]`, the maximum sum would be `0`, since we would
+not take any elements.
+
+Do this in `O(N)` time.
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](049/code.cpp)<br>
 
 
 
