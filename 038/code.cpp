@@ -3,8 +3,8 @@ Daily Coding Challenge #038
 ---------------------------
 This problem was asked by Microsoft.
 
-You have an N by N board. Write a function that, given N, returns the number of
-possible arrangements of the board where N queens can be placed on the board
+You have an `N by N` board. Write a function that, given `N`, returns the number
+of possible arrangements of the board where N queens can be placed on the board
 without threatening each other, i.e. no two queens share the same row, column,
 or diagonal.
 
@@ -14,70 +14,52 @@ g++ 038/code.cpp -o bin/out && ./bin/out < 038/in.txt > 038/out.txt
 */
 #include <bits/stdc++.h>
 using namespace std;
-#define ll long long
-#define vb vector<bool>
-#define vi vector<int>
 
-bool verify(int n, vb *board) {
-    for (int i = 0; i < n; i++) {
-        int c1 = 0, c2 = 0;
-        for (int j = 0; j < n; j++) {
-            c1 += board[i][j];
-            c2 += board[j][i];
-            if (c1 > 1 || c2 > 1) return false;
-        }
-        c1 = 0, c2 = 0;
-        int c3 = 0, c4 = 0;
-        for (int k = 0; k <= i; k++) {
-            c1 += board[i - k][k];
-            c2 += board[i - k][n - 1 - k];
-            c3 += board[n - 1 - k][k];
-            c4 += board[n - 1 - k][i - k];
-            if (c1 > 1 || c2 > 1 || c3 > 1 || c4 > 1) return false;
-        }
+bool verify(vector<int> queenPos) {
+    int last = queenPos.size() - 1;
+    int lastPos = queenPos[last];
+    for (int i = 0; i < last; i++) {
+        int cur = queenPos[i];
+        int dist = last - i;
+        if (dist < 0) dist = -dist;
+        if (cur == lastPos || cur + dist == lastPos || cur - dist == lastPos)
+            return false;
     }
     return true;
 }
 
-void print(int n, vb *board) {
+void print(int n, vector<int> queenPos) {
+    n = queenPos.size();
     for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            cout << board[i][j] << " ";
-        }
+        for (int j = 0; j < queenPos[i]; j++) cout << "• ";
+        cout << "Q ";
+        for (int j = queenPos[i] + 1; j < n; j++) cout << "• ";
         cout << endl;
     }
 }
 
-bool nQueen(int n, vb *board, int i, vb *checks) {
-    if (i == n) return true;
-    for (int j = 0; j < n; j++) {
-        int in = i - j;
-        if (in < 0) in = n - in;
-        if (checks[0][j] || checks[1][i + j] || checks[2][in]) continue;
-        board[i][j] = true;
-        checks[0][j] = checks[1][i + j] = checks[2][in] = true;
-        // if (verify(n, board))
-        if (nQueen(n, board, i + 1, checks)) return true;
-        board[i][j] = false;
-        checks[0][j] = checks[1][i + j] = checks[2][in] = false;
+int nQueen(int n, vector<int> &queenPos, vector<int> &final) {
+    if (n == queenPos.size()) return 1;
+    int cnt = 0, cur = 0;
+    for (int i = 0; i < n; i++) {
+        queenPos.push_back(i);
+        if (verify(queenPos)) {
+            cur = nQueen(n, queenPos, final);
+            if (cur && final.size() == 0)
+                for (int k = 0; k < n; k++) final.push_back(queenPos[k]);
+            cnt += cur;
+        }
+        queenPos.pop_back();
     }
-    return false;
+    return cnt;
 }
 
 void solve(int n) {
     // cin >> n;
-    vb board[n];
-    vb checks[4];
-    checks[0] = vb(n, 0);
-    checks[1] = vb(n * 2, 0);
-    checks[2] = vb(n * 2, 0);
-
-    for (int i = 0; i < n; i++) board[i] = vb(n, 0);
-    bool possible = nQueen(n, board, 0, checks);
-    cout << n << endl;
-    if (!possible) cout << "im";
-    cout << "possible" << endl;
-    print(n, board);
+    vector<int> queenPos, final;
+    int cnt = nQueen(n, queenPos, final);
+    cout << cnt << " Possible for " << n << endl;
+    print(n, final);
     return;
 }
 
