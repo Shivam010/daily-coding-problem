@@ -1,1 +1,4 @@
-
+Expression => ( (3) + (2) ) * ( (4) + (5) ) 
+Result => 45
+Expression => ( (12) * (5) ) + ( (12) * (10) ) 
+Result => 180
