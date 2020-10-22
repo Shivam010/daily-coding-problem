@@ -7,15 +7,11 @@ Daily Coding Problem
 Solving one problem every day.
 Problem selection is done by the [Daily Coding Problem](https://www.dailycodingproblem.com/) initiative.
 
-_Starting from September 03, 2020, I have solved 49 problems._<br>
+_Starting from September 03, 2020, I have solved 50 problems._<br>
 You can find the problems in their respective directories.
 
 _Want to join me? or Just need to stay upto date? <br>
 **Start watching the repository.**_
-
-**Next problem:
-&nbsp; `#050`**
-<br>
 
 
 Problem: &nbsp;`#001`
@@ -1032,6 +1028,30 @@ Do this in `O(N)` time.
 **Solution(s)**:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](049/code.cpp)<br>
+
+
+Problem: &nbsp;`#050`
+------------
+This problem was asked by Microsoft.
+
+Suppose an arithmetic expression is given as a binary tree. Each leaf is an
+integer and each internal node is one of `'+', '−', '∗', or '/'`.
+
+Given the root to such a tree, write a function to evaluate it.
+
+For example, given the following tree:
+```
+    *
+   / \
+  +    +
+ / \  / \
+3  2  4  5
+```
+You should return `45`, as it is `(3 + 2) * (4 + 5)`.
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](050/code.cpp)<br>
 
 
 
