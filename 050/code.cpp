@@ -46,8 +46,8 @@ struct Node {
             str += ") ";
         }
     }
-    int Solve() {
-        int leftPart = 0, rightPart = 0;
+    float Solve() {
+        float leftPart = 0, rightPart = 0;
         if (left) leftPart = left->Solve();
         if (right) rightPart = right->Solve();
         if (!left && !right) {
@@ -58,7 +58,7 @@ struct Node {
         if (val == "+") return leftPart + rightPart;
         if (val == "-") return leftPart - rightPart;
         if (val == "*") return leftPart * rightPart;
-        if (val == "/" && rightPart) return leftPart / rightPart;
+        if (val == "/" && rightPart) return float(leftPart) / float(rightPart);
         return INFINITY;
     }
 };
