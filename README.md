@@ -7,15 +7,11 @@ Daily Coding Problem
 Solving one problem every day.
 Problem selection is done by the [Daily Coding Problem](https://www.dailycodingproblem.com/) initiative.
 
-_Starting from September 03, 2020, I have solved 50 problems._<br>
+_Starting from September 03, 2020, I have solved 51 problems._<br>
 You can find the problems in their respective directories.
 
 _Want to join me? or Just need to stay upto date? <br>
 **Start watching the repository.**_
-
-**Next problem:
-&nbsp; `#051`**
-<br>
 
 
 Problem: &nbsp;`#001`
@@ -1056,6 +1052,23 @@ You should return `45`, as it is `(3 + 2) * (4 + 5)`.
 **Solution(s)**:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](050/code.cpp)<br>
+
+
+Problem: &nbsp;`#051`
+------------
+This problem was asked by Facebook.
+
+Given a function that generates perfectly random numbers between 1 and k
+(inclusive), where k is an input, write a function that shuffles a deck of cards
+represented as an array using only swaps.
+
+It should run in O(N) time.
+
+Hint: Make sure each one of the 52! permutations of the deck is equally likely.
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](051/code.cpp)<br>
 
 
 
