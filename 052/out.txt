@@ -1,1 +1,32 @@
-
+Key Value pair is stored: 1..11
+											Size of cache: 1 ->  0..0  1..11  0..0 
+Key Value pair is stored: 2..12
+											Size of cache: 2 ->  0..0  2..12  1..11  0..0 
+Value of key: 2 is 12
+											Size of cache: 2 ->  0..0  2..12  1..11  0..0 
+Value of key: 1 is 11
+											Size of cache: 2 ->  0..0  1..11  2..12  0..0 
+Key Value pair is stored: 3..123
+											Size of cache: 3 ->  0..0  3..123  1..11  2..12  0..0 
+Key Value pair is stored: 4..1234
+											Size of cache: 4 ->  0..0  4..1234  3..123  1..11  2..12  0..0 
+Key Value pair is stored: 5..12345
+											Size of cache: 5 ->  0..0  5..12345  4..1234  3..123  1..11  2..12  0..0 
+Value of key: 1 is 11
+											Size of cache: 5 ->  0..0  1..11  5..12345  4..1234  3..123  2..12  0..0 
+Key Value pair is stored: 6..123456
+											Size of cache: 5 ->  0..0  6..123456  1..11  5..12345  4..1234  3..123  0..0 
+Key: 2 Not Found
+											Size of cache: 5 ->  0..0  6..123456  1..11  5..12345  4..1234  3..123  0..0 
+Value of key: 3 is 123
+											Size of cache: 5 ->  0..0  3..123  6..123456  1..11  5..12345  4..1234  0..0 
+Key Value pair is stored: 7..1234567
+											Size of cache: 5 ->  0..0  7..1234567  3..123  6..123456  1..11  5..12345  0..0 
+Key: 4 Not Found
+											Size of cache: 5 ->  0..0  7..1234567  3..123  6..123456  1..11  5..12345  0..0 
+Key Value pair is stored: 8..12345678
+											Size of cache: 5 ->  0..0  8..12345678  7..1234567  3..123  6..123456  1..11  0..0 
+Key: 5 Not Found
+											Size of cache: 5 ->  0..0  8..12345678  7..1234567  3..123  6..123456  1..11  0..0 
+Value of key: 8 is 12345678
+											Size of cache: 5 ->  0..0  8..12345678  7..1234567  3..123  6..123456  1..11  0..0 
