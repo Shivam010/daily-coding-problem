@@ -7,15 +7,11 @@ Daily Coding Problem
 Solving one problem every day.
 Problem selection is done by the [Daily Coding Problem](https://www.dailycodingproblem.com/) initiative.
 
-_Starting from September 03, 2020, I have solved 51 problems._<br>
+_Starting from September 03, 2020, I have solved 52 problems._<br>
 You can find the problems in their respective directories.
 
 _Want to join me? or Just need to stay upto date? <br>
 **Start watching the repository.**_
-
-**Next problem:
-&nbsp; `#052`**
-<br>
 
 
 Problem: &nbsp;`#001`
@@ -1073,6 +1069,25 @@ Hint: Make sure each one of the 52! permutations of the deck is equally likely.
 **Solution(s)**:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](051/code.cpp)<br>
+
+
+Problem: &nbsp;`#052`
+------------
+This problem was asked by Google.
+
+Implement an LRU `(Least Recently Used)` cache. It should be able to be
+initialized with a cache size `n`, and contain the following methods:
+
+`set(key, value)`: sets key to value. If there are already n items in the cache
+and we are adding a new item, then it should also remove the least recently used
+item.
+
+`get(key)`: gets the value at key. If no such key exists, return null. Each
+operation should run in `O(1)` time.
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](052/code.cpp)<br>
 
 
 
