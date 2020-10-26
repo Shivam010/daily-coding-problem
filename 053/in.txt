@@ -1,1 +1,11 @@
-
+10
+dequeue 
+enqueue 1
+dequeue 
+enqueue 10
+enqueue 12
+enqueue 13
+dequeue 
+dequeue 
+enqueue 11
+dequeue 
