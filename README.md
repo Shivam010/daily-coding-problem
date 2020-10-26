@@ -7,15 +7,11 @@ Daily Coding Problem
 Solving one problem every day.
 Problem selection is done by the [Daily Coding Problem](https://www.dailycodingproblem.com/) initiative.
 
-_Starting from September 03, 2020, I have solved 52 problems._<br>
+_Starting from September 03, 2020, I have solved 53 problems._<br>
 You can find the problems in their respective directories.
 
 _Want to join me? or Just need to stay upto date? <br>
 **Start watching the repository.**_
-
-**Next problem:
-&nbsp; `#053`**
-<br>
 
 
 Problem: &nbsp;`#001`
@@ -1092,6 +1088,19 @@ operation should run in `O(1)` time.
 **Solution(s)**:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](052/code.cpp)<br>
+
+
+Problem: &nbsp;`#053`
+------------
+This problem was asked by Apple.
+
+Implement a queue using two stacks. Recall that a queue is a FIFO (first-in,
+first-out) data structure with the following methods: enqueue, which inserts an
+element into the queue, and dequeue, which removes it.
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](053/code.cpp)<br>
 
 
 
