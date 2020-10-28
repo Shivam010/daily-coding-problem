@@ -7,7 +7,7 @@ Daily Coding Problem
 Solving one problem every day.
 Problem selection is done by the [Daily Coding Problem](https://www.dailycodingproblem.com/) initiative.
 
-_Starting from September 03, 2020, I have solved 53 problems._<br>
+_Starting from September 03, 2020, I have solved 55 problems._<br>
 You can find the problems in their respective directories.
 
 _Want to join me? or Just need to stay upto date? <br>
@@ -16,9 +16,6 @@ _Want to join me? or Just need to stay upto date? <br>
 **Next problem:
 &nbsp; `#056`**
 <br>
-**Missed problems:
-&nbsp; `#054`
-&nbsp; • &nbsp; `#055`**
 
 
 Problem: &nbsp;`#001`
@@ -1108,6 +1105,39 @@ element into the queue, and dequeue, which removes it.
 **Solution(s)**:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](053/code.cpp)<br>
+
+
+Problem: &nbsp;`#054`
+------------
+This problem was asked by Dropbox.
+
+Sudoku is a puzzle where you're given a partially-filled 9 by 9 grid with
+digits. The objective is to fill the grid with the constraint that every row,
+column, and box (3 by 3 subgrid) must contain all of the digits from 1 to 9.
+
+Implement an efficient sudoku solver.
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](054/code.cpp)<br>
+
+
+Problem: &nbsp;`#055`
+------------
+This problem was asked by Microsoft.
+
+Implement a URL shortener with the following methods:
+
+- `shorten(url)`, which shortens the url into a six-character alphanumeric
+string, such as `zLg6wl`.
+- `restore(short)`, which expands the shortened string into the original url. If
+no such shortened string exists, return null.
+
+Hint: What if we enter the same URL twice?
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](055/code.cpp)<br>
 
 
 
