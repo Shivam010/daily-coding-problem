@@ -1,1 +1,9 @@
-
+8
+restore notfound.com
+shorten google.com
+shorten google.com
+restore aaaaaa
+shorten github.com
+restore aaaaab
+shorten github.com/Shivam010
+restore aaaaac
