@@ -14,7 +14,7 @@ _Want to join me? or Just need to stay upto date? <br>
 **Start watching the repository.**_
 
 **Next problem:
-&nbsp; `#073`**
+&nbsp; `#074`**
 <br>
 **Missed problems:
 &nbsp; `#056`
@@ -33,7 +33,8 @@ _Want to join me? or Just need to stay upto date? <br>
 &nbsp; • &nbsp; `#069`
 &nbsp; • &nbsp; `#070`
 &nbsp; • &nbsp; `#071`
-&nbsp; • &nbsp; `#072`**
+&nbsp; • &nbsp; `#072`
+&nbsp; • &nbsp; `#073`**
 
 
 Problem: &nbsp;`#001`
