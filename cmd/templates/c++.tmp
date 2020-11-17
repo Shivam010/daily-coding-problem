@@ -1,0 +1,20 @@
+// Copyright (c) 2020 Shivam Rathore. All rights reserved.
+// Use of this source code is governed by MIT License that
+// can be found in the LICENSE file.
+
+// This file contains Solution to Challenge #{{.}}, run using
+// g++ {{.}}/code.cpp -o bin/out && ./bin/out < {{.}}/in.txt > {{.}}/out.txt
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve() {
+    return;
+}
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        solve();
+    }
+}

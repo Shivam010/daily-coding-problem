@@ -1,10 +1,13 @@
-// main package is the script which on running will setup a new
-// daily problem directory and update readme using Github Actions
+// Copyright (c) 2020 Shivam Rathore. All rights reserved.
+// Use of this source code is governed by MIT License that
+// can be found in the LICENSE file.
+
+// Package main contains the script which on running will setup
+// the new daily problem directory/files, and finally update the
+// README file using Github Actions
 package main
 
 import (
-	"bytes"
-	"errors"
 	"fmt"
 	"io/ioutil"
 	"log"
@@ -12,126 +15,185 @@ import (
 	"path"
 	"strconv"
 	"strings"
+	"time"
 )
+
+// startDate: day before the first date of solving problems
+var startDate = time.Date(2020, time.September, 2, 0, 0, 0, 0, time.Local)
+
+// pwd: current working director to save all challenges, it is stored in
+// the file `cmd/pwd`.
+// It will not change until the days' past Sept 03 reaches it's threshold
+var pwd = struct {
+	Value string // actual directory
+	Lower int    // lower limit of the range
+	Upper int    // upper limit of the range
+}{}
+
+func init() {
+	data, err := ioutil.ReadFile("cmd/pwd")
+	if err != nil {
+		log.Panicln("storage file `cmd/pwd` has been compromised, error:", err)
+	}
+	pwd.Value = string(data)
+	parts := strings.Split(pwd.Value, "-")
+	pwd.Lower, err = strconv.Atoi(parts[0])
+	if err != nil {
+		log.Panicln("storage file `cmd/pwd` has been compromised, error:", err)
+	}
+	pwd.Upper, err = strconv.Atoi(parts[1])
+	if err != nil {
+		log.Panicln("storage file `cmd/pwd` has been compromised, error:", err)
+	}
+}
 
 func main() {
 	if os.Getenv("push") != "" {
-		// runs using Github Actions' Push event
-		// and update the readme
-		onPush()
+		// Push event
+		// Update the readme
+		updateReadme()
 	}
 	if os.Getenv("cron") != "" {
-		// runs using Github Actions' Cron job every day
-		// and setup a new problem directory
-		onCronRun()
-		onPush()
+		// Cron job: every day
+		// Setup new problem directory
+		setupNewDirectory()
+		// and update the readme
+		updateReadme()
+	}
+	// update `cmd/pwd` file
+	if err := ioutil.WriteFile("cmd/pwd", []byte(pwd.Value), 0644); err != nil {
+		log.Panicln("Something went wrong updating `cmd/pwd`, error:", err)
 	}
 }
 
-func onPush() {
+func updateReadme() {
 	fmt.Println("Updating the README")
-	list, err := ioutil.ReadDir(".")
+	list, err := ioutil.ReadDir(pwd.Value)
 	if err != nil {
-		log.Println("read dir error:", err)
-		return
+		log.Panicln("read dir error:", err)
 	}
 
-	prob := make([]*ProblemData, 0, len(list))
-	unsolved := make([]string, 0, len(list))
+	last, lastSolved := 0, ""
+	missed := make([]string, 0, len(list))
 
 	for _, dir := range list {
-		// check directory
-		n, err := strconv.Atoi(dir.Name())
+		name := dir.Name()
+		n, err := strconv.Atoi(name)
 		if n == 0 || err != nil || !dir.IsDir() {
 			continue
 		}
-		data := ""
-		name := dir.Name()
-		solList := make([]*SolutionData, 0, 2)
+		dirPath := path.Join(pwd.Value, name)
 
-		solFiles, err := ioutil.ReadDir(dir.Name())
+		files, err := ioutil.ReadDir(dirPath)
 		if err != nil {
-			log.Printf("read dir error for name(%v): %v\n", name, err)
-			return
+			log.Panicf("read dir error for name(%v): %v\n", name, err)
 		}
 
-		for _, file := range solFiles {
-			fileN := file.Name()
-			if len(fileN) < 5 || fileN[:5] != "code." || file.IsDir() {
+		// read <dirPath>/README.md
+		_data, err := ioutil.ReadFile(path.Join(dirPath, "README.md"))
+		if err != nil {
+			log.Panicln("read dir error:", err)
+		}
+		data := string(_data)
+		notYetUpdated := strings.Contains(data, "Not yet checked or started")
+		if strings.Contains(data, "> Check mail") && notYetUpdated {
+			// missed
+			missed = append(missed, name)
+			continue
+		}
+
+		solList := make([]*SolutionData, 0, 2)
+		for _, solDir := range files {
+			name := solDir.Name()
+			if !solDir.IsDir() {
 				continue
 			}
-			filePath := path.Join(dir.Name(), fileN)
-			if data == "" {
-				data, err = extract(filePath)
-				if err != nil {
-					log.Printf("read file content error for name(%v): %v\n", name, err)
-					data = ""
-				}
-			}
-			ext := fileN[5:]
-			switch ext {
-			case "py":
-				ext = "Python"
-			case "cpp":
-				ext = "C++"
+			lang, filePath := "", "code"
+			switch name {
+			case "python":
+				lang = "Python"
+				filePath += ".py"
+			case "c++":
+				lang = "C++"
+				filePath += ".cpp"
 			case "go":
-				ext = "Golang"
-			default:
-				ext = strings.Title(ext)
+				lang = "Golang"
+				filePath += ".go"
 			}
 			solList = append(solList, &SolutionData{
-				Language: ext,
-				FilePath: filePath,
+				Language: lang,
+				FilePath: path.Join(name, filePath),
 			})
 		}
 
-		if data == "\n\n\n" {
-			unsolved = append(unsolved, name)
-			continue
+		// remove footer from data
+		if ind := strings.Index(data, "![]()"); ind != -1 {
+			data = data[:ind]
 		}
-		prob = append(prob, &ProblemData{
-			Number:    name,
-			Data:      data,
-			Solutions: solList,
-		})
+
+		// if readme is not yet updated
+		if notYetUpdated {
+			onlyQues := data
+			// index after the Date column
+			if ind := strings.Index(onlyQues, "_<br>"); ind != -1 {
+				onlyQues = onlyQues[ind+6:]
+			}
+			// index before the solutions
+			if ind := strings.Index(onlyQues, "**Solution(s)**"); ind != -1 {
+				onlyQues = onlyQues[:ind]
+			}
+			if err := renderTemplate(
+				problemReadmeTmp,
+				path.Join(dirPath, "README.md"),
+				&ProblemData{
+					Name:      name,
+					Data:      onlyQues,
+					Date:      startDate.AddDate(0, 0, n).Format("January 02, 2006"),
+					Solutions: solList,
+				},
+			); err != nil {
+				return
+			}
+		}
+
+		if last < n {
+			last = n
+			lastSolved = "Last Solved" + data[7:]
+			for _, sol := range solList {
+				lastSolved = strings.Replace(lastSolved, sol.FilePath, path.Join(dirPath, sol.FilePath), 1)
+			}
+		}
 	}
-	if err := updateReadme(&Data{
-		Problems: prob,
-		Unsolved: unsolved,
-	}); err != nil {
-		log.Printf("error updating README: %v\n", err)
+	if last == 0 {
+		last = pwd.Lower - 1
+	}
+
+	next := ""
+	if len(missed) > 0 {
+		next = missed[len(missed)-1]
+		missed = missed[:len(missed)-1]
+	}
+	// update main readme
+	if err := renderTemplate(
+		readmeTmp,
+		"README.md",
+		&Data{
+			Days:       int(time.Since(startDate.Add(21*time.Hour))) / int(time.Hour*24),
+			Solved:     last,
+			Next:       next,
+			Missed:     missed,
+			LastSolved: lastSolved,
+		},
+	); err != nil {
 		return
 	}
 }
 
-var (
-	// ---------------------------
-	stSep = bytes.Repeat([]byte("-"), 27)
-	// Run Using
-	// ---------
-	endSep = []byte("Run Using\n---------")
-)
-
-func extract(file string) (string, error) {
-	data, err := ioutil.ReadFile(file)
-	if err != nil {
-		return "", err
-	}
-	st := bytes.Index(data, stSep)
-	if st == -1 {
-		return "", errors.New("st not found")
-	}
-	st += len(stSep)
-	en := bytes.Index(data, endSep)
-	return string(data[st:en]), nil
-}
-
-func onCronRun() {
+func setupNewDirectory() {
 	fmt.Println("Setting up new Problem directory")
-	list, err := ioutil.ReadDir(".")
+	list, err := ioutil.ReadDir(pwd.Value)
 	if err != nil {
-		log.Println("read dir error:", err)
-		return
+		log.Panicln("read dir error:", err)
 	}
 	last := 0
 	for _, dir := range list {
@@ -143,17 +205,48 @@ func onCronRun() {
 			last = n
 		}
 	}
+	if last == pwd.Upper {
+		// change pwd
+		pwd.Lower, pwd.Upper = pwd.Lower+50, pwd.Upper+50
+		pwd.Value = fmt.Sprintf("%v-%v", pwd.Lower, pwd.Upper)
+		if err = os.Mkdir(pwd.Value, 0755); err != nil {
+			log.Panicln("Something went wrong creating new pwd", pwd, "error:", err)
+		}
+	}
 	name := fmt.Sprintf("%03v", last+1)
-	if err := os.Mkdir(name, 0755); err != nil {
-		log.Printf("mkdir error for name(%v): %v\n", name, err)
+	fullPath := path.Join(pwd.Value, name)
+
+	// C++ code structure
+	cppN := path.Join(fullPath, "c++")
+	if err := os.MkdirAll(cppN, 0755); err != nil {
+		log.Panicf("mkdir error for path(%v): %v\n", cppN, err)
+	}
+	if err := renderTemplate(cppTmp, path.Join(cppN, "code.cpp"), name); err != nil {
 		return
 	}
-	if err := createCpp(name); err != nil {
-		log.Printf("createCPP error for name(%v): %v\n", name, err)
+
+	// go code structure
+	goN := path.Join(fullPath, "go")
+	if err := os.MkdirAll(goN, 0755); err != nil {
+		log.Panicf("mkdir error for path(%v): %v\n", goN, err)
+	}
+	if err := renderTemplate(goTmp, path.Join(goN, "code.go"), name); err != nil {
 		return
 	}
-	if err := createPy(name); err != nil {
-		log.Printf("createPy error for name(%v): %v\n", name, err)
+	if err := renderTemplate(goTestTmp, path.Join(goN, "code_test.go"), name); err != nil {
+		return
+	}
+
+	// update problem readme
+	if err := renderTemplate(
+		problemReadmeTmp,
+		path.Join(fullPath, "README.md"),
+		&ProblemData{
+			Name: name,
+			Data: "> Check mail\n\n",
+			Date: startDate.AddDate(0, 0, last+1).Format("January 02, 2006"),
+		},
+	); err != nil {
 		return
 	}
 }

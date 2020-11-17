@@ -1,0 +1,23 @@
+Problem: &nbsp;`#{{.Name }}`
+------------
+_Date: {{ .Date }}_<br>
+{{ .Data -}}
+
+**Solution(s)**:<br>
+{{- if not .Solutions }}
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • _Not yet checked or started_ <br>
+{{- end -}}
+{{- range .Solutions }}
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [{{.Language}}]({{.FilePath}})<br>
+{{- end}}
+
+![]()
+-----
+<p align="center">
+    <b><i>
+	    People find their paths in the strangest of ways. Let's find our own! <br>
+	    Let's connect <a href="https://shivam010.in">here</a>.
+	</i></b>
+</p>

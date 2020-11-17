@@ -1,44 +1,20 @@
 package main
 
 import (
-	"io/ioutil"
+	log "log"
 	"os"
 	"path"
 	"text/template"
 )
 
 var (
-	dotPyTmpl  = template.Must(template.ParseFiles(path.Join("cmd", "py.gotxt")))
-	dotCppTmpl = template.Must(template.ParseFiles(path.Join("cmd", "cpp.gotxt")))
-	readmeTmpl = template.Must(template.ParseFiles(path.Join("cmd", "readme.gomd")))
-	problemTmpl = template.Must(template.ParseFiles(path.Join("cmd", "problem.gomd")))
+	// all templates
+	goTmp            = template.Must(template.ParseFiles(path.Join("cmd", "templates", "go.tmp")))
+	cppTmp           = template.Must(template.ParseFiles(path.Join("cmd", "templates", "c++.tmp")))
+	goTestTmp        = template.Must(template.ParseFiles(path.Join("cmd", "templates", "go_test.tmp")))
+	readmeTmp        = template.Must(template.ParseFiles(path.Join("cmd", "templates", "readme.tmp")))
+	problemReadmeTmp = template.Must(template.ParseFiles(path.Join("cmd", "templates", "problem-readme.tmp")))
 )
-
-func createCpp(name string) error {
-	file, err := os.Create(path.Join(name, "code.cpp"))
-	if err != nil {
-		return err
-	}
-	if err := dotCppTmpl.Execute(file, name); err != nil {
-		return err
-	}
-	err = ioutil.WriteFile(path.Join(name, "in.txt"), []byte("\n"), 0644)
-	if err != nil {
-		return err
-	}
-	return ioutil.WriteFile(path.Join(name, "out.txt"), []byte("\n"), 0644)
-}
-
-func createPy(name string) error {
-	file, err := os.Create(path.Join(name, "code.py"))
-	if err != nil {
-		return err
-	}
-	if err := file.Chmod(0755); err != nil {
-		return err
-	}
-	return dotPyTmpl.Execute(file, name)
-}
 
 // SolutionData represents a unit solution block
 type SolutionData struct {
@@ -48,39 +24,31 @@ type SolutionData struct {
 
 // ProblemData represents a unit problem that is solved
 type ProblemData struct {
-	Number    string
+	Name      string
 	Data      string
-	Unsolved  []string
+	Date      string
 	Solutions []*SolutionData
 }
 
-// Data represents the final object for the template containing
-// solved problems' data and unsolved one's number.
+// ReadmeData represents the statistic data to show in main README
 type Data struct {
-	Problems []*ProblemData
-	Unsolved []string
-	// functions
-	Last   func(sl []string) string
-	Missed func(sl []string) []string
+	Days       int
+	Solved     int
+	Next       string
+	Missed     []string
+	LastSolved string
 }
 
-func updateReadme(data *Data) error {
-	data.Last = func(sl []string) string {
-		if len(sl) == 0 {
-			return ""
-		}
-		return sl[len(sl)-1]
-	}
-	data.Missed = func(sl []string) []string {
-		if len(sl) == 0 {
-			return sl
-		}
-		return sl[:len(sl)-1]
-	}
-	file, err := os.Create("README.md")
+// renderTemplate: renders the template `tmp` using `data` into the file at location `into`
+func renderTemplate(tmp *template.Template, into string, data interface{}) error {
+	file, err := os.Create(into)
 	if err != nil {
+		log.Printf("renderTemplate: file(%v) create error: %v\n", into, err)
 		return err
 	}
-
-	return readmeTmpl.Execute(file, data)
+	if err := tmp.Execute(file, data); err != nil {
+		log.Printf("renderTemplate: error for %v: %v\n", into, err)
+		return err
+	}
+	return nil
 }
