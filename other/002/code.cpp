@@ -1,40 +1,10 @@
-/*
-Other Coding Challenge #002
----------------------------
-This problem was asked by Turvo.
+// Copyright (c) 2020 Shivam Rathore. All rights reserved.
+// Use of this source code is governed by MIT License that
+// can be found in the LICENSE file.
 
-You are given a tree consisting of `N` vertices, rooted at vertex `1`. Each
-vertex consists of a lowercase English alphabet as a node value.
-
-If the ancestor node has the same node value as that of any vertex then that
-ancestor node is considered as its valid parent vertex.
-
-Your task is to detach all the nodes from the tree and attach them to any of the
-valid parent vertices (in the initial tree) and print the number of connected
-components obtained.
-
-For example, the following tree:
-```
-    1(a)
-    /
-  2(a)
-   \
-   3(b)
-    \
-    4(a)
-```
-will have 2 connected components:
-```
-    1(a)
-    /   \      and    3(b)
-  2(a)  4(a)
-```
-
-Run Using
----------
-g++ other/002/code.cpp -o bin/out && ./bin/out < other/002/in.txt > \
-other/002/out.txt
-*/
+// This file contains Solution to Challenge Other#002, run using
+// g++ other/002/code.cpp -o bin/out
+// ./bin/out < other/002/in.txt > other/002/out.txt
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long

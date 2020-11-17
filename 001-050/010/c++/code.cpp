@@ -3,7 +3,7 @@
 // can be found in the LICENSE file.
 
 // This file contains Solution to Challenge #010, run using
-// g++ 010/code.cpp -o bin/out && time ./bin/out
+// g++ 001-050/010/c++/code.cpp -o bin/out && time bin/out
 */
 #include <bits/stdc++.h>
 #include <time.h>

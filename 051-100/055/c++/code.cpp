@@ -3,7 +3,8 @@
 // can be found in the LICENSE file.
 
 // This file contains Solution to Challenge #055, run using
-// g++ 055/code.cpp -o bin/out && ./bin/out < 055/in.txt > 055/out.txt
+// g++ 051-100/055/c++/code.cpp -o bin/out
+// ./bin/out < 051-100/055/c++/in.txt > 051-100/055/c++/out.txt
 #include <bits/stdc++.h>
 
 #include <unordered_map>

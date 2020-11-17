@@ -1,27 +1,10 @@
-/*
-Other Coding Challenge #001
----------------------------
-This problem was asked by Turvo.
+// Copyright (c) 2020 Shivam Rathore. All rights reserved.
+// Use of this source code is governed by MIT License that
+// can be found in the LICENSE file.
 
-You are given 5 functions:
-
-`gcd(a, b)` is the greatest common divisor of `a` and `b`
-
-`A(x)` is the number of `i` where `1 <= i <= x` and `gcd(i, x) = 1`
-
-`B(x)` is the sum of `A(d)` for all `d` that divides the number `x`
-
-`C(x)` is the sum of exponents of each prime in prime factorization of `B(x)`
-
-`D(x) is the sum of C(i) where `1 <= i <= x`
-
-Now, you are given an integer `N`. Your task is to find the value of `D(N)`.
-
-Run Using
----------
-g++ other/001/code.cpp -o bin/out && ./bin/out < other/001/in.txt > \
-other/001/out.txt
-*/
+// This file contains Solution to Challenge Other#001, run using
+// g++ other/001/code.cpp -o bin/out
+// ./bin/out < other/001/in.txt > other/001/out.txt
 #include <bits/stdc++.h>
 using namespace std;
 

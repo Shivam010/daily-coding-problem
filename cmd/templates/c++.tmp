@@ -2,8 +2,9 @@
 // Use of this source code is governed by MIT License that
 // can be found in the LICENSE file.
 
-// This file contains Solution to Challenge #{{.}}, run using
-// g++ {{.}}/code.cpp -o bin/out && ./bin/out < {{.}}/in.txt > {{.}}/out.txt
+// This file contains Solution to Challenge #{{.name}}, run using
+// g++ {{.path}}/c++/code.cpp -o bin/out
+// ./bin/out < {{.path}}/c++/in.txt > {{.path}}/c++/out.txt
 #include <bits/stdc++.h>
 using namespace std;
 

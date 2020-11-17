@@ -18,8 +18,8 @@ import (
 	"time"
 )
 
-// startDate: day before the first date of solving problems
-var startDate = time.Date(2020, time.September, 2, 0, 0, 0, 0, time.Local)
+// startDate: day before the first date of solving problems i.e September 02, 2020 IST
+var startDate time.Time
 
 // pwd: current working director to save all challenges, it is stored in
 // the file `cmd/pwd`.
@@ -31,6 +31,8 @@ var pwd = struct {
 }{}
 
 func init() {
+	ist, _ := time.LoadLocation("Asia/Kolkata")
+	startDate = time.Date(2020, time.September, 2, 0, 0, 0, 0, ist)
 	data, err := ioutil.ReadFile("cmd/pwd")
 	if err != nil {
 		log.Panicln("storage file `cmd/pwd` has been compromised, error:", err)
@@ -221,7 +223,10 @@ func setupNewDirectory() {
 	if err := os.MkdirAll(cppN, 0755); err != nil {
 		log.Panicf("mkdir error for path(%v): %v\n", cppN, err)
 	}
-	if err := renderTemplate(cppTmp, path.Join(cppN, "code.cpp"), name); err != nil {
+	if err := renderTemplate(cppTmp,
+		path.Join(cppN, "code.cpp"),
+		map[string]interface{}{"name": name, "path": fullPath},
+	); err != nil {
 		return
 	}
 

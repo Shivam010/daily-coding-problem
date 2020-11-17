@@ -3,7 +3,8 @@
 // can be found in the LICENSE file.
 
 // This file contains Solution to Challenge #073, run using
-// g++ 073/code.cpp -o bin/out && ./bin/out < 073/in.txt > 073/out.txt
+// g++ 051-100/073/c++/code.cpp -o bin/out
+// ./bin/out < 051-100/073/c++/in.txt > 051-100/073/c++/out.txt
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long

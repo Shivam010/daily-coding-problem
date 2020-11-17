@@ -1,11 +1,11 @@
-#!/usr/bin/env python3.7
+#!/usr/bin/env python3
 
 # Copyright (c) 2020 Shivam Rathore. All rights reserved.
 # Use of this source code is governed by MIT License that
 # can be found in the LICENSE file.
 
 # This file contains Solution to Challenge #010, run using
-# time ./010/code.py
+# time ./001-050/010/python/code.py
 
 
 import time

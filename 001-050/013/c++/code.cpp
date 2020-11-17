@@ -3,7 +3,8 @@
 // can be found in the LICENSE file.
 
 // This file contains Solution to Challenge #013, run using
-// g++ 013/code.cpp -o bin/out && ./bin/out < 013/in.txt > 013/out.txt
+// g++ 001-050/013/c++/code.cpp -o bin/out
+// ./bin/out < 001-050/013/c++/in.txt > 001-050/013/c++/out.txt
 #include <bits/stdc++.h>
 using namespace std;
 #define vi vector<int>
