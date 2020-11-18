@@ -6,26 +6,31 @@ package _005
 
 import (
 	"reflect"
+	"strconv"
 	"testing"
 )
 
 func TestSolution(t *testing.T) {
-	type args struct {
-	}
-	type want struct {
-	}
 	tests := []struct {
-		name string
-		args args
-		want want
+		first, second interface{}
 	}{
-		// TODO: Add test cases.
+		{3, 4},
+		{"one", "two"},
+		{struct{}{}, nil},
+		{map[struct{}]struct{}{{}: {}}, []string{""}},
 	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			if got := Solution(); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("Solution() = %v, want %v", got, tt.want)
-			}
+	for i, tt := range tests {
+		t.Run(strconv.Itoa(i), func(t *testing.T) {
+			t.Run("car", func(t *testing.T) {
+				if got := Car(Cons(tt.first, tt.second)); !reflect.DeepEqual(got, tt.first) {
+					t.Errorf("Car(Cons(...)) = %v, want %v", got, tt.first)
+				}
+			})
+			t.Run("cdr", func(t *testing.T) {
+				if got := Cdr(Cons(tt.first, tt.second)); !reflect.DeepEqual(got, tt.second) {
+					t.Errorf("Cdr(Cons(...)) = %v, want %v", got, tt.second)
+				}
+			})
 		})
 	}
 }

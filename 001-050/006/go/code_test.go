@@ -5,27 +5,32 @@
 package _006
 
 import (
-	"reflect"
+	"strings"
 	"testing"
 )
 
-func TestSolution(t *testing.T) {
-	type args struct {
+func TestList(t *testing.T) {
+	list := NewXorLinkedList()
+	list.Add(1)
+	get, ok := list.Get(0)
+	if want := 1; !ok || get != want {
+		t.Errorf("List add/get, got = %v,%v, want %v,%v", get, ok, want, true)
 	}
-	type want struct {
+	get, ok = list.Get(1)
+	if want := 0; ok || get != want {
+		t.Errorf("List add/get, got = %v,%v want %v,%v", get, ok, want, false)
 	}
-	tests := []struct {
-		name string
-		args args
-		want want
-	}{
-		// TODO: Add test cases.
+	list.Add(43)
+	list.Add(65)
+	list.Add(864)
+	get, ok = list.Get(3)
+	if want := 864; !ok || get != want {
+		t.Errorf("List add/get, got = %v,%v want %v,%v", get, ok, want, true)
 	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			if got := Solution(); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("Solution() = %v, want %v", got, tt.want)
-			}
-		})
+
+	w := &strings.Builder{}
+	list.Print(w)
+	if want := "1 43 65 864 "; w.String() != want {
+		t.Errorf("List print, got = %v, want %v", w.String(), want)
 	}
 }

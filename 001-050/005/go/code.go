@@ -6,7 +6,19 @@
 // TestSolution for test cases
 package _005
 
-// Solution for 005
-func Solution() interface{} {
-	return nil
+type Pair struct{ a, b interface{} }
+
+// Cons constructs a pair
+func Cons(a, b interface{}) Pair {
+	return Pair{a: a, b: b}
+}
+
+// Car returns the first element of that Pair
+func Car(p Pair) interface{} {
+	return p.a
+}
+
+// Cdr returns the last element of that Pair
+func Cdr(p Pair) interface{} {
+	return p.b
 }
