@@ -9,11 +9,11 @@
 using namespace std;
 
 struct Node {
-    vector<int> indices;
+    int index; // note: using only last index instead of complete list
     Node* next[26];
 
     Node() {
-        indices = vector<int>();
+        index = -1;
         for (int i = 0; i < 26; i++) {
             next[i] = NULL;
         }
@@ -28,13 +28,14 @@ struct Node {
         if (!next[c - 'a']) next[c - 'a'] = new Node();
         return next[c - 'a'];
     }
-    void Mark(int in) { indices.push_back(in); }
+    void Mark(int in) { index = in; }
 };
 
 void Traverse(Node* trie, vector<int>& ans) {
     if (trie == NULL) return;
-    int n = trie->indices.size();
-    for (int j = 0; j < n; j++) ans.push_back(trie->indices[j]);
+    if (trie->index != -1) {
+        ans.push_back(trie->index);
+    }
     for (int i = 0; i < 26; i++) {
         Node* next = trie->next[i];
         if (next) Traverse(next, ans);
