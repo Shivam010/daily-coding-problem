@@ -57,6 +57,7 @@ void second() {
         cin >> cur;
         if (i == 0) {
             b = max(a, cur);
+            ans = b;
             continue;
         }
         ans = max(b, max(cur, a + cur));

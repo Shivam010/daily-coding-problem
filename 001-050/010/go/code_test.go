@@ -5,27 +5,57 @@
 package _010
 
 import (
-	"reflect"
 	"testing"
+	"time"
 )
 
-func TestSolution(t *testing.T) {
-	type args struct {
+func nilError(t *testing.T, err error) {
+	t.Helper()
+	if err != nil {
+		t.Error(err, "error should be nil")
 	}
-	type want struct {
+}
+
+func TestScheduler(t *testing.T) {
+	fn := func(d time.Duration) (func(), time.Duration) {
+		return func() { t.Log("ran after", d) }, d
 	}
-	tests := []struct {
-		name string
-		args args
-		want want
-	}{
-		// TODO: Add test cases.
+
+	mp, cnt := map[int]struct{}{}, 0
+	check := func(id int, err error) {
+		cnt++
+		nilError(t, err)
+		if _, ok := mp[id]; ok {
+			t.Error("scheduled fn id must be unique")
+		}
+		mp[id] = struct{}{}
 	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			if got := Solution(); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("Solution() = %v, want %v", got, tt.want)
+
+	// scheduler
+	sch := NewScheduler()
+
+	// acknowledgement
+	done := make(chan struct{})
+	go func() {
+		for id := range sch.Ack() {
+			if id > cnt || id < 0 {
+				t.Error("acknowledged id must be among the ids of scheduler", "id", id)
 			}
-		})
+		}
+		done <- struct{}{}
+	}()
+
+	check(sch.Schedule(fn(time.Second)))
+	check(sch.Schedule(fn(time.Millisecond)))
+	check(sch.Schedule(fn(100 * time.Nanosecond)))
+
+	// stop scheduling
+	sch.StopScheduling()
+
+	// try adding again
+	if _, err := sch.Schedule(fn(time.Second)); err != ErrSchedulerStopped {
+		t.Error("ErrSchedulerStopped error should be returned")
 	}
+
+	<-done
 }
