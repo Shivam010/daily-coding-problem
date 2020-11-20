@@ -1,5 +1,12 @@
 Problem: &nbsp;`#{{.Name }}`
 ------------
+{{- if .Solutions }}
+[![Open for Review](https://img.shields.io/badge/open-for%20reviews-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem/issues)
+{{ range .Solutions -}}
+[![{{.Language}}](https://img.shields.io/badge/solution-{{.Language}}-brightgreen?style=plastic)]({{.FilePath}})
+{{ end -}}
+[![MIT License](https://img.shields.io/github/license/Shivam010/daily-coding-problem?style=plastic)](https://github.com/Shivam010/daily-coding-problem/blob/master/LICENSE)
+{{ end }}
 _Date: {{ .Date }}_<br>
 {{ .Data -}}
 

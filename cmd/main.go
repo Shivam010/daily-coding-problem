@@ -160,9 +160,23 @@ func updateReadme() {
 
 		if last < n {
 			last = n
-			lastSolved = "Last Solved" + data[7:]
+			_data, err := ioutil.ReadFile(path.Join(dirPath, "README.md"))
+			if err != nil {
+				log.Panicln("read dir error:", err)
+			}
+			lastSolved = string(_data)
+			// remove header & footer from data
+			if ind := strings.Index(lastSolved, "_Date:"); ind != -1 {
+				lastSolved = lastSolved[ind:]
+			}
+			if ind := strings.Index(lastSolved, "![]()"); ind != -1 {
+				lastSolved = lastSolved[:ind]
+			}
+
+			lastSolved = "Last Solved: &nbsp;`#" + name +
+				"`\n------------\n" + lastSolved
 			for _, sol := range solList {
-				lastSolved = strings.Replace(lastSolved, sol.FilePath, path.Join(dirPath, sol.FilePath), 1)
+				lastSolved = strings.ReplaceAll(lastSolved, sol.FilePath, path.Join(dirPath, sol.FilePath))
 			}
 		}
 	}

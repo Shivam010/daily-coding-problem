@@ -9,6 +9,11 @@ Daily Coding Problem
 [![Problems Solved](https://img.shields.io/badge/problems-56%20solved-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem)
 [![Problems Missed](https://img.shields.io/badge/problems-32%20missed-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem)
 [![MIT License](https://img.shields.io/github/license/Shivam010/daily-coding-problem?style=plastic)](https://github.com/Shivam010/daily-coding-problem/blob/master/LICENSE)
+<br>
+[![Open for Review](https://img.shields.io/badge/open-for%20reviews-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem/issues/new)
+[![Golang](https://img.shields.io/badge/solution-Golang-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem)
+[![C++](https://img.shields.io/badge/solution-C++-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem)
+[![Python](https://img.shields.io/badge/solution-Python-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem)
 
 > _People find their paths in the strangest of ways._
 
@@ -83,8 +88,6 @@ write a function to determine whether each vertex in the graph can be colored
 such that no two adjacent vertices share the same color using at most k colors.
 
 **Solution(s)**:<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    • [C++](051-100/056/c++/code.cpp)<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [Golang](051-100/056/go/code.go)<br>
 

@@ -11,19 +11,14 @@
 using namespace std;
 #define ll long long
 
-struct UrlShortner {
+// constChar => constant base62 characters
+const string constChar = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+struct UrlShortener {
    private:
     // count => number of urls in system
     int count;
 
-    // constChar => constant base62 characters
-    string constChar;
-    // constInit initializes the base string
-    void constInit() {
-        for (int i = 0; i < 26; i++) constChar.push_back('a' + i);
-        for (int i = 0; i < 26; i++) constChar.push_back('A' + i);
-        for (int i = 0; i < 10; i++) constChar.push_back('0' + i);
-    }
     // coverts integer to base62 strings
     string convert(int n) {
         string str = "";
@@ -44,8 +39,7 @@ struct UrlShortner {
     unordered_map<string, string> reverse_storage;
 
    public:
-    UrlShortner() {
-        constInit();
+    UrlShortener() {
         count = 0;
     }
 
@@ -68,7 +62,7 @@ struct UrlShortner {
 };
 
 int main() {
-    UrlShortner shortner;
+    UrlShortener shortener;
 
     int t;
     cin >> t;
@@ -76,10 +70,8 @@ int main() {
         string op, url;
         cin >> op >> url;
         if (op == "shorten")
-            cout << op << " url for url: " << url << " is \n\t"
-                 << shortner.shorten(url) << endl;
+            cout << shortener.shorten(url) << endl;
         else if (op == "restore")
-            cout << op << " short-url: " << url << " is \n\t"
-                 << shortner.restore(url) << endl;
+            cout << shortener.restore(url) << endl;
     }
 }
