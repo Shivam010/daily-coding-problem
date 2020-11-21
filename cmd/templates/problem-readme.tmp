@@ -20,7 +20,7 @@ _Date: {{ .Date }}_<br>
     • [{{.Language}}]({{.FilePath}})<br>
 {{- end}}
 
-![]()
+[]()
 -----
 <p align="center">
     <b><i>

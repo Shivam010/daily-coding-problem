@@ -29,7 +29,7 @@ void solve() {
 
     for (int i = k; i < n; i++) {
         cin >> el;
-        // removing all out of window elements
+        // removing all out off window elements
         while (first != -1) {
             if (in[first] > i - k) break;
             if (first == last)

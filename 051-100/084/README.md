@@ -7,7 +7,7 @@ _Date: November 25, 2020_<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • _Not yet checked or started_ <br>
 
-![]()
+[]()
 -----
 <p align="center">
     <b><i>

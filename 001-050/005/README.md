@@ -1,5 +1,10 @@
 Problem: &nbsp;`#005`
 ------------
+[![Open for Review](https://img.shields.io/badge/open-for%20reviews-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem/issues)
+[![Golang](https://img.shields.io/badge/solution-Golang-brightgreen?style=plastic)](go/code.go)
+[![Python](https://img.shields.io/badge/solution-Python-brightgreen?style=plastic)](python/code.py)
+[![MIT License](https://img.shields.io/github/license/Shivam010/daily-coding-problem?style=plastic)](https://github.com/Shivam010/daily-coding-problem/blob/master/LICENSE)
+
 _Date: September 07, 2020_<br>
 This problem was asked by Jane Street.
 
@@ -22,12 +27,11 @@ Implement `car` and `cdr`.
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [Python](python/code.py)<br>
 
-![]()
+[]()
 -----
 <p align="center">
     <b><i>
-        People find their paths in the strangest of ways. Let's find our own! <br>
-        Let's connect <a href="https://shivam010.in">here</a>.
-    </i></b>
+	    People find their paths in the strangest of ways. Let's find our own! <br>
+	    Let's connect <a href="https://shivam010.in">here</a>.
+	</i></b>
 </p>
-

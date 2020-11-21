@@ -21,7 +21,7 @@ Now, you are given an integer `N`. Your task is to find the value of `D(N)`.
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](code.cpp)<br>
 
-![]()
+[]()
 -----
 <p align="center">
     <b><i>

@@ -16,8 +16,8 @@ int rand5() {
 }
 
 int rand7() {
-    // as `7` if not one of the power of `5` hence it is not possible to
-    // generate random number between `1 and 7` uniformally using `rand5()` in
+    // As `7` if not one of the power of `5` hence it will not possible to
+    // generate random number between `1 and 7` uniformly using `rand5()` in
     // finite time; and hence a different approach is to be considers:
 
     // `val` will have a random number between `1 and 25 (inclusive)` with

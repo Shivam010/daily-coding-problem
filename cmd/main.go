@@ -75,7 +75,7 @@ func updateReadme() {
 		log.Panicln("read dir error:", err)
 	}
 
-	last, lastSolved := 0, ""
+	last := 0
 	missed := make([]string, 0, len(list))
 
 	for _, dir := range list {
@@ -85,11 +85,6 @@ func updateReadme() {
 			continue
 		}
 		dirPath := path.Join(pwd.Value, name)
-
-		files, err := ioutil.ReadDir(dirPath)
-		if err != nil {
-			log.Panicf("read dir error for name(%v): %v\n", name, err)
-		}
 
 		// read <dirPath>/README.md
 		_data, err := ioutil.ReadFile(path.Join(dirPath, "README.md"))
@@ -104,43 +99,18 @@ func updateReadme() {
 			continue
 		}
 
-		solList := make([]*SolutionData, 0, 2)
-		for _, solDir := range files {
-			name := solDir.Name()
-			if !solDir.IsDir() {
-				continue
-			}
-			lang, filePath := "", "code"
-			switch name {
-			case "python":
-				lang = "Python"
-				filePath += ".py"
-			case "c++":
-				lang = "C++"
-				filePath += ".cpp"
-			case "go":
-				lang = "Golang"
-				filePath += ".go"
-			}
-			solList = append(solList, &SolutionData{
-				Language: lang,
-				FilePath: path.Join(name, filePath),
-			})
-		}
-
-		// remove footer from data
-		if ind := strings.Index(data, "![]()"); ind != -1 {
-			data = data[:ind]
-		}
-
 		// if readme is not yet updated
 		if notYetUpdated {
 			onlyQues := data
-			// index after the Date column
+			// remove header section
 			if ind := strings.Index(onlyQues, "_<br>"); ind != -1 {
 				onlyQues = onlyQues[ind+6:]
 			}
-			// index before the solutions
+			// remove footer section
+			if ind := strings.Index(onlyQues, "[]()"); ind != -1 {
+				onlyQues = onlyQues[:ind]
+			}
+			// remove solutions section
 			if ind := strings.Index(onlyQues, "**Solution(s)**"); ind != -1 {
 				onlyQues = onlyQues[:ind]
 			}
@@ -151,7 +121,7 @@ func updateReadme() {
 					Name:      name,
 					Data:      onlyQues,
 					Date:      startDate.AddDate(0, 0, n).Format("January 02, 2006"),
-					Solutions: solList,
+					Solutions: listSolutions(name, dirPath),
 				},
 			); err != nil {
 				return
@@ -160,24 +130,6 @@ func updateReadme() {
 
 		if last < n {
 			last = n
-			_data, err := ioutil.ReadFile(path.Join(dirPath, "README.md"))
-			if err != nil {
-				log.Panicln("read dir error:", err)
-			}
-			lastSolved = string(_data)
-			// remove header & footer from data
-			if ind := strings.Index(lastSolved, "_Date:"); ind != -1 {
-				lastSolved = lastSolved[ind:]
-			}
-			if ind := strings.Index(lastSolved, "![]()"); ind != -1 {
-				lastSolved = lastSolved[:ind]
-			}
-
-			lastSolved = "Last Solved: &nbsp;`#" + name +
-				"`\n------------\n" + lastSolved
-			for _, sol := range solList {
-				lastSolved = strings.ReplaceAll(lastSolved, sol.FilePath, path.Join(dirPath, sol.FilePath))
-			}
 		}
 	}
 	if last == 0 {
@@ -198,7 +150,7 @@ func updateReadme() {
 			Solved:     last,
 			Next:       next,
 			Missed:     missed,
-			LastSolved: lastSolved,
+			Noteworthy: listNoteworthy(),
 		},
 	); err != nil {
 		return
@@ -268,4 +220,76 @@ func setupNewDirectory() {
 	); err != nil {
 		return
 	}
+}
+
+var pwdList = []string{"001-050", "051-100", "101-150"}
+
+func listNoteworthy() []string {
+	data, err := ioutil.ReadFile("note-worthy")
+	if err != nil {
+		log.Panicln("storage file `note-worthy` has been compromised, error:", err)
+	}
+	names := strings.Split(string(data), "\n")
+
+	list := make([]string, 0, len(names))
+	for _, name := range names {
+		if name == "" {
+			continue
+		}
+		no, err := strconv.Atoi(name)
+		if err != nil {
+			log.Panicln("error for name:", name, "error:", err)
+		}
+		name := fmt.Sprintf("%03v", no)
+		dirPath := path.Join(pwdList[(no-1)/50], name)
+
+		_data, err := ioutil.ReadFile(path.Join(dirPath, "README.md"))
+		if err != nil {
+			log.Panicln("read dir error:", err)
+		}
+		data := string(_data)
+		// remove footer from data
+		if ind := strings.Index(data, "[]()"); ind != -1 {
+			data = data[:ind]
+		}
+		for _, sol := range listSolutions(name, dirPath) {
+			data = strings.ReplaceAll(data, sol.FilePath, path.Join(dirPath, sol.FilePath))
+		}
+		list = append(list, data)
+	}
+
+	return list
+}
+
+func listSolutions(question, dirPath string) []*SolutionData {
+
+	files, err := ioutil.ReadDir(dirPath)
+	if err != nil {
+		log.Panicf("read dir error for name(%v): %v\n", question, err)
+	}
+
+	solList := make([]*SolutionData, 0, 2)
+	for _, solDir := range files {
+		name := solDir.Name()
+		if !solDir.IsDir() {
+			continue
+		}
+		lang, filePath := "", "code"
+		switch name {
+		case "python":
+			lang = "Python"
+			filePath += ".py"
+		case "c++":
+			lang = "C++"
+			filePath += ".cpp"
+		case "go":
+			lang = "Golang"
+			filePath += ".go"
+		}
+		solList = append(solList, &SolutionData{
+			Language: lang,
+			FilePath: path.Join(name, filePath),
+		})
+	}
+	return solList
 }

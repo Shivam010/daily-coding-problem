@@ -15,7 +15,7 @@ such that no two adjacent vertices share the same color using at most k colors.
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [Golang](go/code.go)<br>
 
-![]()
+[]()
 -----
 <p align="center">
     <b><i>

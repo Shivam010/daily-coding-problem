@@ -23,7 +23,7 @@ Hint: What if we enter the same URL twice?
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [Golang](go/code.go)<br>
 
-![]()
+[]()
 -----
 <p align="center">
     <b><i>

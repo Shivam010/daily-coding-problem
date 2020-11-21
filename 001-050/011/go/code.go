@@ -6,6 +6,7 @@
 // TestSolution for test cases
 package _011
 
+// Trie is the data structure that helps to implement autocomplete system
 type Trie interface {
 	// AddWords adds more words to the dictionary of Trie
 	AddWords(words ...string)

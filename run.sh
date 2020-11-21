@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # base is the working directory e.g. 001-050
-base=001-050 # $(cat cmd/pwd)
-lang="$1"
-dir="${base}/${2}"
+base=$(cat cmd/pwd)
+dir="${base}/${1}"
+lang="$2"
 
 if [ ! -d "${dir}" ]; then
-    echo "invalid dir passed: ${2} => ${dir}"
+    echo "invalid dir passed: ${dir}"
 fi
 
 if [ "${lang}" == "go" ]; then

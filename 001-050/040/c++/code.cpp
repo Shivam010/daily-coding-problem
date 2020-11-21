@@ -35,7 +35,7 @@ void solve() {
     for (int i = 0; i < n; i++) {
         cin >> cur;
         int ii = 0;
-        while (cur) {
+        while (cur && ii<64) {
             // as bit-by-bit summation of 3 values will be nullify
             // and the finally the ii'th bit of mask will only be
             // set if it is set in the non-duplicate number
@@ -56,6 +56,6 @@ int main() {
     int t;
     cin >> t;
     while (t--) {
-        nLogN();
+        solve();
     }
 }

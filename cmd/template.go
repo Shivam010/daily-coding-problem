@@ -36,7 +36,7 @@ type Data struct {
 	Solved     int
 	Next       string
 	Missed     []string
-	LastSolved string
+	Noteworthy []string
 }
 
 // renderTemplate: renders the template `tmp` using `data` into the file at location `into`

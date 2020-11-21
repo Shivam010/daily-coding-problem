@@ -11,7 +11,7 @@ using namespace std;
 
 struct Node {
    private:
-    // isNullHeader: for identifing header & footer in LRU and null key, value
+    // isNullHeader: for identifying header & footer in LRU and null key, value
     bool isNullHeader;
 
    public:

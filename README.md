@@ -78,8 +78,222 @@ Anything you feel that needs correction._
     &nbsp; • &nbsp; `#088`**
 
 
-Last Solved: &nbsp;`#056`
+<!-- Do not edit. To add more problems, add them in `./note-worthy` file -->
+Some of the problems I have solved are listed here...
+
+Problem: &nbsp;`#010`
 ------------
+[![Open for Review](https://img.shields.io/badge/open-for%20reviews-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem/issues)
+[![C++](https://img.shields.io/badge/solution-C++-brightgreen?style=plastic)](001-050/010/c++/code.cpp)
+[![Golang](https://img.shields.io/badge/solution-Golang-brightgreen?style=plastic)](001-050/010/go/code.go)
+[![Python](https://img.shields.io/badge/solution-Python-brightgreen?style=plastic)](001-050/010/python/code.py)
+[![MIT License](https://img.shields.io/github/license/Shivam010/daily-coding-problem?style=plastic)](https://github.com/Shivam010/daily-coding-problem/blob/master/LICENSE)
+
+_Date: September 12, 2020_<br>
+This problem was asked by Apple.
+
+Implement a _**job scheduler**_ which takes in a function f and an integer n, and
+calls f after n milliseconds.
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](001-050/010/c++/code.cpp)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [Golang](001-050/010/go/code.go)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [Python](001-050/010/python/code.py)<br>
+
+
+Problem: &nbsp;`#011`
+------------
+[![Open for Review](https://img.shields.io/badge/open-for%20reviews-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem/issues)
+[![C++](https://img.shields.io/badge/solution-C++-brightgreen?style=plastic)](001-050/011/c++/code.cpp)
+[![Golang](https://img.shields.io/badge/solution-Golang-brightgreen?style=plastic)](001-050/011/go/code.go)
+[![MIT License](https://img.shields.io/github/license/Shivam010/daily-coding-problem?style=plastic)](https://github.com/Shivam010/daily-coding-problem/blob/master/LICENSE)
+
+_Date: September 13, 2020_<br>
+This problem was asked by Twitter.
+
+Implement an _**autocomplete system**_. That is, given a query string s and a set of
+all possible query strings, return all strings in the set that have s as a
+prefix.
+
+For example, given the query string `de` and the set of strings `[dog, deer,
+deal]`, return `[deer, deal]`.
+
+Hint: Try preprocessing the dictionary into a more efficient data structure to
+speed up queries.
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](001-050/011/c++/code.cpp)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [Golang](001-050/011/go/code.go)<br>
+
+
+Problem: &nbsp;`#015`
+------------
+[![Open for Review](https://img.shields.io/badge/open-for%20reviews-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem/issues)
+[![C++](https://img.shields.io/badge/solution-C++-brightgreen?style=plastic)](001-050/015/c++/code.cpp)
+[![Golang](https://img.shields.io/badge/solution-Golang-brightgreen?style=plastic)](001-050/015/go/code.go)
+[![MIT License](https://img.shields.io/github/license/Shivam010/daily-coding-problem?style=plastic)](https://github.com/Shivam010/daily-coding-problem/blob/master/LICENSE)
+
+_Date: September 17, 2020_<br>
+This problem was asked by Facebook.
+
+Given a stream of elements too large to store in memory, pick a random element
+from the stream with uniform probability.<br> i.e. _**UniformSelection**_
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](001-050/015/c++/code.cpp)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [Golang](001-050/015/go/code.go)<br>
+
+
+Problem: &nbsp;`#055`
+------------
+[![Open for Review](https://img.shields.io/badge/open-for%20reviews-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem/issues)
+[![C++](https://img.shields.io/badge/solution-C++-brightgreen?style=plastic)](051-100/055/c++/code.cpp)
+[![Golang](https://img.shields.io/badge/solution-Golang-brightgreen?style=plastic)](051-100/055/go/code.go)
+[![MIT License](https://img.shields.io/github/license/Shivam010/daily-coding-problem?style=plastic)](https://github.com/Shivam010/daily-coding-problem/blob/master/LICENSE)
+
+_Date: October 27, 2020_<br>
+This problem was asked by Microsoft.
+
+Implement a URL shortener with the following methods:
+
+- `shorten(url)`, which shortens the url into a six-character alphanumeric
+string, such as `zLg6wl`.
+- `restore(short)`, which expands the shortened string into the original url. If
+no such shortened string exists, return null.
+
+Hint: What if we enter the same URL twice?
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](051-100/055/c++/code.cpp)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [Golang](051-100/055/go/code.go)<br>
+
+
+Problem: &nbsp;`#024`
+------------
+[![Open for Review](https://img.shields.io/badge/open-for%20reviews-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem/issues)
+[![C++](https://img.shields.io/badge/solution-C++-brightgreen?style=plastic)](001-050/024/c++/code.cpp)
+[![MIT License](https://img.shields.io/github/license/Shivam010/daily-coding-problem?style=plastic)](https://github.com/Shivam010/daily-coding-problem/blob/master/LICENSE)
+
+_Date: September 26, 2020_<br>
+This problem was asked by Google.
+
+Implement locking in a binary tree. A binary tree node can be locked or unlocked
+only if all of its descendants or ancestors are not locked.
+
+Design a binary tree node class with the following methods:
+
+- `is_locked`, which returns whether the node is locked.
+- `lock`, which attempts to lock the node. If it cannot be locked, then it
+should return false. Otherwise, it should lock it and return true.
+- `unlock`, which unlocks the node. If it cannot be unlocked, then it should
+return false. Otherwise, it should unlock it and return true.
+
+You may augment the node to add parent pointers or any other property you would
+like. You may assume the class is used in a single-threaded program, so there is
+no need for actual locks or mutexes. Each method should run in `O(h)`, where `h`
+is the height of the tree.
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](001-050/024/c++/code.cpp)<br>
+
+
+Problem: &nbsp;`#045`
+------------
+[![Open for Review](https://img.shields.io/badge/open-for%20reviews-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem/issues)
+[![C++](https://img.shields.io/badge/solution-C++-brightgreen?style=plastic)](001-050/045/c++/code.cpp)
+[![Golang](https://img.shields.io/badge/solution-Golang-brightgreen?style=plastic)](001-050/045/go/code.go)
+[![MIT License](https://img.shields.io/github/license/Shivam010/daily-coding-problem?style=plastic)](https://github.com/Shivam010/daily-coding-problem/blob/master/LICENSE)
+
+_Date: October 17, 2020_<br>
+This problem was asked by Two Sigma.
+
+Using a function `rand5()` that returns an integer from `1 to 5 (inclusive)`
+with uniform probability, implement a function `rand7()` that returns an integer
+from `1 to 7 (inclusive)`.
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](001-050/045/c++/code.cpp)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [Golang](001-050/045/go/code.go)<br>
+
+
+Problem: &nbsp;`#022`
+------------
+[![Open for Review](https://img.shields.io/badge/open-for%20reviews-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem/issues)
+[![C++](https://img.shields.io/badge/solution-C++-brightgreen?style=plastic)](001-050/022/c++/code.cpp)
+[![MIT License](https://img.shields.io/github/license/Shivam010/daily-coding-problem?style=plastic)](https://github.com/Shivam010/daily-coding-problem/blob/master/LICENSE)
+
+_Date: September 24, 2020_<br>
+This problem was asked by Microsoft.
+
+Given a dictionary of words and a string made up of those words (no spaces),
+return the original sentence in a list. If there is more than one possible
+reconstruction, return any of them. If there is no possible reconstruction, then
+return null.
+
+For example, given the set of words `'quick', 'brown', 'the', 'fox'`, and the
+string `"thequickbrownfox"`, you should return `['the', 'quick', 'brown', 'fox']`.
+
+Given the set of words `'bed', 'bath', 'bedbath', 'and', 'beyond'`, and the string
+`"bedbathandbeyond"`, return either `['bed', 'bath', 'and', 'beyond]` or `['bedbath',
+'and', 'beyond']`
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](001-050/022/c++/code.cpp)<br>
+
+
+Problem: &nbsp;`#039`
+------------
+[![Open for Review](https://img.shields.io/badge/open-for%20reviews-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem/issues)
+[![C++](https://img.shields.io/badge/solution-C++-brightgreen?style=plastic)](001-050/039/c++/code.cpp)
+[![MIT License](https://img.shields.io/github/license/Shivam010/daily-coding-problem?style=plastic)](https://github.com/Shivam010/daily-coding-problem/blob/master/LICENSE)
+
+_Date: October 11, 2020_<br>
+This problem was asked by Dropbox _(System Design)_.
+
+_**Conway's Game of Life**_ takes place on an infinite two-dimensional board of square
+cells. Each cell is either dead or alive, and at each tick, the following rules
+apply:
+
+Any live cell with less than two live neighbours dies.
+Any live cell with two or three live neighbours remains living.
+Any live cell with more than three live neighbours dies.
+Any dead cell with exactly three live neighbours becomes a live cell.
+A cell neighbours another cell if it is horizontally, vertically, or diagonally
+adjacent.
+
+Implement Conway's Game of Life. It should be able to be initialized with a
+starting list of live cell coordinates and the number of steps it should run
+for. Once initialized, it should print out the board state at each step. Since
+it's an infinite board, print out only the relevant coordinates, i.e. from the
+top-leftmost live cell to bottom-rightmost live cell.
+
+You can represent a live cell with an asterisk `(*)` and a dead cell with a dot
+`(.)`.
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [C++](001-050/039/c++/code.cpp)<br>
+
+
+Problem: &nbsp;`#056`
+------------
+[![Open for Review](https://img.shields.io/badge/open-for%20reviews-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem/issues)
+[![Golang](https://img.shields.io/badge/solution-Golang-brightgreen?style=plastic)](051-100/056/go/code.go)
+[![MIT License](https://img.shields.io/github/license/Shivam010/daily-coding-problem?style=plastic)](https://github.com/Shivam010/daily-coding-problem/blob/master/LICENSE)
+
 _Date: October 28, 2020_<br>
 This problem was asked by Google.
 
@@ -91,7 +305,10 @@ such that no two adjacent vertices share the same color using at most k colors.
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [Golang](051-100/056/go/code.go)<br>
 
-![]()
+
+
+
+[]()
 -----
 <p align="center">
     <b><i>

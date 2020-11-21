@@ -34,7 +34,7 @@ will have 2 connected components:
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [C++](code.cpp)<br>
 
-![]()
+[]()
 -----
 <p align="center">
     <b><i>

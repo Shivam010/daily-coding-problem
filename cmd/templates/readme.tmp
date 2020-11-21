@@ -53,9 +53,14 @@ Anything you feel that needs correction._
 {{- end -}}**
 {{ end }}
 
-{{ .LastSolved -}}
+<!-- Do not edit. To add more problems, add them in `./note-worthy` file -->
+Some of the problems I have solved are listed here...
 
-![]()
+{{ range .Noteworthy -}}
+    {{.}}
+{{end}}
+
+[]()
 -----
 <p align="center">
     <b><i>

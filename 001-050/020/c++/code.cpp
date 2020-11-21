@@ -52,6 +52,28 @@ struct Node {
         }
         return len;
     }
+
+    void Print() {
+        Node* cur = this;
+        cout << "List: ";
+        while (cur != NULL) {
+            cout << cur << " -> ";
+            cur = cur->next;
+        }
+        cout << endl;
+    }
+
+    Node* Reverse() {
+        Node* cur = this;
+        Node *x = NULL, *y = NULL;
+        while (cur != NULL) {
+            x = cur->next;
+            cur->next = y;
+            y = cur;
+            cur = x;
+        }
+        return y;
+    }
 };
 
 void flush() {
@@ -67,26 +89,33 @@ void solve() {
     first = new Node(F);
     second = new Node(S);
 
-    int fn = first->length(), sn = second->length();
-    if (sn > fn) {
-        swap(fn, sn);
-        swap(first, second);
-    }
+    // Reversing both list
+    first = first->Reverse();
+    second = second->Reverse();
 
-    // till both are of equal lengths;
-    while (fn > sn) first = first->next, fn--;
-    while (sn > fn) second = second->next, sn--;
+    // cout << "F "<<endl;
+    // first->Print();
+    // first = first->Reverse();
+    // cout << "Reverse F "<<endl;
+    // first->Print();
 
-    // And now, if both list's pointers intersect, then the upcoming while
-    // condition, `(first && second && first->val != second->val)` can be
-    // changed to `(first && second && first != second)`
-    while (first && second && first->val != second->val) {
+    // cout << "S "<<endl;
+    // second->Print();
+    // second = second->Reverse();
+    // cout << "Reverse S "<<endl;
+    // second->Print();
+
+    Node* joint = NULL;
+    // And now, check for intersections
+    while (first && second) {
+        if (first->val == second->val)  // if (first == second)
+            // they intersect at
+            joint = first;
         first = first->next;
         second = second->next;
     }
-    if (first && second)
-        cout << "Interects at value: " << first->val << ", pointor" << first
-             << endl;
+    if (joint)
+        cout << "Both list interects at: " << joint->val << endl;
     else
         cout << "Both list never intersects" << endl;
 }
