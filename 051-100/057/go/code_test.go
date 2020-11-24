@@ -6,24 +6,45 @@ package _057
 
 import (
 	"reflect"
+	"strconv"
 	"testing"
 )
 
 func TestSolution(t *testing.T) {
-	type args struct {
-	}
-	type want struct {
-	}
 	tests := []struct {
-		name string
-		args args
-		want want
+		str  string
+		k    int
+		want []string
 	}{
-		// TODO: Add test cases.
+		{
+			str:  "the quick brown fox jumps over the lazy dog",
+			k:    10,
+			want: []string{"the quick", "brown fox", "jumps over", "the lazy", "dog"},
+		},
+		{
+			str:  "the quick brown fox jumps over the lazy dog",
+			k:    3,
+			want: nil,
+		},
+		{
+			str:  "quick",
+			k:    3,
+			want: nil,
+		},
+		{
+			str:  "quick",
+			k:    10,
+			want: []string{"quick"},
+		},
+		{
+			str:  "the quick brown fox jumps over the lazy dog",
+			k:    5,
+			want: []string{"the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"},
+		},
 	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			if got := Solution(); !reflect.DeepEqual(got, tt.want) {
+	for i, tt := range tests {
+		t.Run(strconv.Itoa(i), func(t *testing.T) {
+			if got := Solution(tt.str, tt.k); !reflect.DeepEqual(got, tt.want) {
 				t.Errorf("Solution() = %v, want %v", got, tt.want)
 			}
 		})

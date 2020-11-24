@@ -5,9 +5,9 @@ Daily Coding Problem
 [![Script](https://github.com/Shivam010/daily-coding-problem/workflows/Script/badge.svg)](https://github.com/Shivam010/daily-coding-problem/actions?query=workflow%3AScript)
 [![Cron](https://github.com/Shivam010/daily-coding-problem/workflows/Cron/badge.svg)](https://github.com/Shivam010/daily-coding-problem/actions?query=workflow%3ACron)
 [![Greetings](https://github.com/Shivam010/daily-coding-problem/workflows/Greetings/badge.svg)](https://github.com/Shivam010/daily-coding-problem/actions?query=workflow%3AGreetings)
-[![Days](https://img.shields.io/badge/since-89%20days-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem)
-[![Problems Solved](https://img.shields.io/badge/problems-56%20solved-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem)
-[![Problems Missed](https://img.shields.io/badge/problems-32%20missed-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem)
+[![Days](https://img.shields.io/badge/since-101%20days-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem)
+[![Problems Solved](https://img.shields.io/badge/problems-58%20solved-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem)
+[![Problems Missed](https://img.shields.io/badge/problems-30%20missed-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem)
 [![MIT License](https://img.shields.io/github/license/Shivam010/daily-coding-problem?style=plastic)](https://github.com/Shivam010/daily-coding-problem/blob/master/LICENSE)
 <br>
 [![Open for Review](https://img.shields.io/badge/open-for%20reviews-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem/issues/new)
@@ -24,7 +24,7 @@ Also, after college, the daily job cycle began, which led to my breakup with com
 solving problems again to keep it up, but could never begin.
 
 So, I decided to subscribe the newsletter and to solve one problem every day. <br>
-Since then I have solved _**`#56 problems`**_.
+Since then I have solved _**`#58 problems`**_.
 You can find the problems and solutions in their directories: [here](https://github.com/Shivam010/daily-coding-problem).
 
 Solutions are mainly in _**C++ and Golang**_, and some problems may
@@ -44,9 +44,7 @@ Anything you feel that needs correction._
 &nbsp; `#089`**
 <br>
 **Missed problems:
-&nbsp; `#057`
-    &nbsp; • &nbsp; `#058`
-    &nbsp; • &nbsp; `#059`
+&nbsp; `#059`
     &nbsp; • &nbsp; `#060`
     &nbsp; • &nbsp; `#061`
     &nbsp; • &nbsp; `#062`
@@ -79,7 +77,7 @@ Anything you feel that needs correction._
 
 
 <!-- Do not edit. To add more problems, add them in `./note-worthy` file -->
-Some of the problems I have solved are listed here...
+Some of the worthy problems I have solved are listed here...
 
 Problem: &nbsp;`#010`
 ------------
