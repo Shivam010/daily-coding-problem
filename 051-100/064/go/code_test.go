@@ -5,27 +5,12 @@
 package _064
 
 import (
-	"reflect"
+	"fmt"
 	"testing"
 )
 
 func TestSolution(t *testing.T) {
-	type args struct {
-	}
-	type want struct {
-	}
-	tests := []struct {
-		name string
-		args args
-		want want
-	}{
-		// TODO: Add test cases.
-	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			if got := Solution(); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("Solution() = %v, want %v", got, tt.want)
-			}
-		})
+	for i := 0; i < 6; i++ {
+		fmt.Println(i, Solution(i))
 	}
 }

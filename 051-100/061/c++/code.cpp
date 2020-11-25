@@ -10,7 +10,14 @@ using namespace std;
 #define ll long long
 
 void solve() {
-    int n;
+    ll x, y, ans =1;
+    cin>>x>>y;
+    while(y) {
+        if (y&1) ans*=x;
+        y>>=1;
+        x*=x;
+    }
+    cout<<ans<<endl;
     return;
 }
 

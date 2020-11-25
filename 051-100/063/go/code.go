@@ -6,7 +6,35 @@
 // TestSolution for test cases
 package _063
 
-// Solution for 063
-func Solution() interface{} {
-	return nil
+import "strings"
+
+type FindWord func(word string) bool
+
+// Solution for 063, assuming all rows have smae length
+func SolutionFunc(mat [][]rune) FindWord {
+	if len(mat) == 0 || len(mat[0]) == 0 {
+		return func(word string) bool { return false }
+	}
+	allPossibles := map[string]struct{}{}
+	for i := range mat {
+		if len(mat[i]) != len(mat[0]) {
+			panic("row lengths must be same")
+		}
+		one := strings.Builder{}
+		for j := range mat[i] {
+			one.WriteRune(mat[i][j])
+		}
+		allPossibles[one.String()] = struct{}{}
+	}
+	for j := range mat[0] {
+		one := strings.Builder{}
+		for i := range mat {
+			one.WriteRune(mat[i][j])
+		}
+		allPossibles[one.String()] = struct{}{}
+	}
+	return func(word string) bool {
+		_, ok := allPossibles[word]
+		return ok
+	}
 }

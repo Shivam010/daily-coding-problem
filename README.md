@@ -5,9 +5,9 @@ Daily Coding Problem
 [![Script](https://github.com/Shivam010/daily-coding-problem/workflows/Script/badge.svg)](https://github.com/Shivam010/daily-coding-problem/actions?query=workflow%3AScript)
 [![Cron](https://github.com/Shivam010/daily-coding-problem/workflows/Cron/badge.svg)](https://github.com/Shivam010/daily-coding-problem/actions?query=workflow%3ACron)
 [![Greetings](https://github.com/Shivam010/daily-coding-problem/workflows/Greetings/badge.svg)](https://github.com/Shivam010/daily-coding-problem/actions?query=workflow%3AGreetings)
-[![Days](https://img.shields.io/badge/since-101%20days-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem)
-[![Problems Solved](https://img.shields.io/badge/problems-58%20solved-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem)
-[![Problems Missed](https://img.shields.io/badge/problems-30%20missed-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem)
+[![Days](https://img.shields.io/badge/since-84%20days-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem)
+[![Problems Solved](https://img.shields.io/badge/problems-66%20solved-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem)
+[![Problems Missed](https://img.shields.io/badge/problems-22%20missed-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem)
 [![MIT License](https://img.shields.io/github/license/Shivam010/daily-coding-problem?style=plastic)](https://github.com/Shivam010/daily-coding-problem/blob/master/LICENSE)
 <br>
 [![Open for Review](https://img.shields.io/badge/open-for%20reviews-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem/issues/new)
@@ -24,7 +24,7 @@ Also, after college, the daily job cycle began, which led to my breakup with com
 solving problems again to keep it up, but could never begin.
 
 So, I decided to subscribe the newsletter and to solve one problem every day. <br>
-Since then I have solved _**`#58 problems`**_.
+Since then I have solved _**`#66 problems`**_.
 You can find the problems and solutions in their directories: [here](https://github.com/Shivam010/daily-coding-problem).
 
 Solutions are mainly in _**C++ and Golang**_, and some problems may
@@ -44,15 +44,7 @@ Anything you feel that needs correction._
 &nbsp; `#089`**
 <br>
 **Missed problems:
-&nbsp; `#059`
-    &nbsp; • &nbsp; `#060`
-    &nbsp; • &nbsp; `#061`
-    &nbsp; • &nbsp; `#062`
-    &nbsp; • &nbsp; `#063`
-    &nbsp; • &nbsp; `#064`
-    &nbsp; • &nbsp; `#065`
-    &nbsp; • &nbsp; `#066`
-    &nbsp; • &nbsp; `#067`
+&nbsp; `#067`
     &nbsp; • &nbsp; `#068`
     &nbsp; • &nbsp; `#069`
     &nbsp; • &nbsp; `#070`
@@ -154,6 +146,23 @@ speed up queries.
     • [C++](001-050/011/c++/code.cpp)<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [Golang](001-050/011/go/code.go)<br>
+
+
+Problem: &nbsp;`#059`
+------------
+[![Open for Review](https://img.shields.io/badge/open-for%20reviews-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem/issues)
+[![Golang](https://img.shields.io/badge/solution-Golang-brightgreen?style=plastic)](051-100/059/go/code.go)
+[![MIT License](https://img.shields.io/github/license/Shivam010/daily-coding-problem?style=plastic)](https://github.com/Shivam010/daily-coding-problem/blob/master/LICENSE)
+
+_Date: October 31, 2020_<br>
+This problem was asked by Google.
+
+Implement a file syncing algorithm for two computers over a low-bandwidth network. What if we know the files in the two
+computers are mostly the same?
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [Golang](051-100/059/go/code.go)<br>
 
 
 Problem: &nbsp;`#015`

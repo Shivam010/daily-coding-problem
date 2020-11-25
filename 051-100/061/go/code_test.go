@@ -5,27 +5,23 @@
 package _061
 
 import (
+	"fmt"
+	"math"
 	"reflect"
 	"testing"
 )
 
 func TestSolution(t *testing.T) {
-	type args struct {
+	for x := 0; x <= 12; x++ {
+		for y := 0; y <= 15; y++ {
+			t.Run(fmt.Sprintf("%v^%v", x, y), func(t *testing.T) {
+				got := Solution(x, y)
+				want := int(math.Pow(float64(x), float64(y)))
+				if !reflect.DeepEqual(got, want) {
+					t.Errorf("Solution() = %v, want %v", got, want)
+				}
+			})
+		}
 	}
-	type want struct {
-	}
-	tests := []struct {
-		name string
-		args args
-		want want
-	}{
-		// TODO: Add test cases.
-	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			if got := Solution(); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("Solution() = %v, want %v", got, tt.want)
-			}
-		})
-	}
+
 }

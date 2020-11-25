@@ -75,7 +75,7 @@ func updateReadme() {
 		log.Panicln("read dir error:", err)
 	}
 
-	last := 0
+	cnt := 0
 	missed := make([]string, 0, len(list))
 
 	for _, dir := range list {
@@ -128,13 +128,9 @@ func updateReadme() {
 			}
 		}
 
-		if last < n {
-			last = n
-		}
+		cnt++
 	}
-	if last == 0 {
-		last = pwd.Lower - 1
-	}
+	cnt += pwd.Lower - 1
 
 	next := ""
 	if len(missed) > 0 {
@@ -147,7 +143,7 @@ func updateReadme() {
 		"README.md",
 		&Data{
 			Days:       int(time.Since(startDate.Add(21*time.Hour))) / int(time.Hour*24),
-			Solved:     last,
+			Solved:     cnt,
 			Next:       next,
 			Missed:     missed,
 			Noteworthy: listNoteworthy(),
