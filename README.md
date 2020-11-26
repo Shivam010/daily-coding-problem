@@ -5,9 +5,9 @@ Daily Coding Problem
 [![Script](https://github.com/Shivam010/daily-coding-problem/workflows/Script/badge.svg)](https://github.com/Shivam010/daily-coding-problem/actions?query=workflow%3AScript)
 [![Cron](https://github.com/Shivam010/daily-coding-problem/workflows/Cron/badge.svg)](https://github.com/Shivam010/daily-coding-problem/actions?query=workflow%3ACron)
 [![Greetings](https://github.com/Shivam010/daily-coding-problem/workflows/Greetings/badge.svg)](https://github.com/Shivam010/daily-coding-problem/actions?query=workflow%3AGreetings)
-[![Days](https://img.shields.io/badge/since-84%20days-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem)
-[![Problems Solved](https://img.shields.io/badge/problems-66%20solved-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem)
-[![Problems Missed](https://img.shields.io/badge/problems-22%20missed-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem)
+[![Days](https://img.shields.io/badge/since-85%20days-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem)
+[![Problems Solved](https://img.shields.io/badge/problems-67%20solved-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem)
+[![Problems Missed](https://img.shields.io/badge/problems-21%20missed-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem)
 [![MIT License](https://img.shields.io/github/license/Shivam010/daily-coding-problem?style=plastic)](https://github.com/Shivam010/daily-coding-problem/blob/master/LICENSE)
 <br>
 [![Open for Review](https://img.shields.io/badge/open-for%20reviews-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem/issues/new)
@@ -24,7 +24,7 @@ Also, after college, the daily job cycle began, which led to my breakup with com
 solving problems again to keep it up, but could never begin.
 
 So, I decided to subscribe the newsletter and to solve one problem every day. <br>
-Since then I have solved _**`#66 problems`**_.
+Since then I have solved _**`#67 problems`**_.
 You can find the problems and solutions in their directories: [here](https://github.com/Shivam010/daily-coding-problem).
 
 Solutions are mainly in _**C++ and Golang**_, and some problems may
@@ -44,8 +44,7 @@ Anything you feel that needs correction._
 &nbsp; `#089`**
 <br>
 **Missed problems:
-&nbsp; `#067`
-    &nbsp; • &nbsp; `#068`
+&nbsp; `#068`
     &nbsp; • &nbsp; `#069`
     &nbsp; • &nbsp; `#070`
     &nbsp; • &nbsp; `#071`
@@ -119,6 +118,30 @@ operation should run in `O(1)` time.
     • [C++](051-100/052/c++/code.cpp)<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     • [Golang](051-100/052/go/code.go)<br>
+
+
+Problem: &nbsp;`#067`
+------------
+[![Open for Review](https://img.shields.io/badge/open-for%20reviews-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem/issues)
+[![Golang](https://img.shields.io/badge/solution-Golang-brightgreen?style=plastic)](051-100/067/go/code.go)
+[![MIT License](https://img.shields.io/github/license/Shivam010/daily-coding-problem?style=plastic)](https://github.com/Shivam010/daily-coding-problem/blob/master/LICENSE)
+
+_Date: November 08, 2020_<br>
+This problem was asked by Google.
+
+Implement an _**LFU (Least Frequently Used) caching**_ system. It should be able to be
+initialized with a cache size `n`, and contain the following methods:
+
+`set(key, value)`: sets key to value. If there are already n items in the cache
+and we are adding a new item, then it should also remove the least frequently used
+item. If there is a tie, then the least recently used key should be removed.
+
+`get(key)`: gets the value at key. If no such key exists, return null. Each
+operation should run in `O(1)` time.
+
+**Solution(s)**:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    • [Golang](051-100/067/go/code.go)<br>
 
 
 Problem: &nbsp;`#011`
