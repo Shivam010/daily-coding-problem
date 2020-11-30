@@ -5,7 +5,7 @@ Daily Coding Problem
 [![Script](https://github.com/Shivam010/daily-coding-problem/workflows/Script/badge.svg)](https://github.com/Shivam010/daily-coding-problem/actions?query=workflow%3AScript)
 [![Cron](https://github.com/Shivam010/daily-coding-problem/workflows/Cron/badge.svg)](https://github.com/Shivam010/daily-coding-problem/actions?query=workflow%3ACron)
 [![Greetings](https://github.com/Shivam010/daily-coding-problem/workflows/Greetings/badge.svg)](https://github.com/Shivam010/daily-coding-problem/actions?query=workflow%3AGreetings)
-[![Days](https://img.shields.io/badge/since-89%20days-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem)
+[![Days](https://img.shields.io/badge/since-88%20days-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem)
 [![Problems Solved](https://img.shields.io/badge/problems-56%20solved-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem)
 [![Problems Missed](https://img.shields.io/badge/problems-32%20missed-brightgreen?style=plastic)](https://github.com/Shivam010/daily-coding-problem)
 [![MIT License](https://img.shields.io/github/license/Shivam010/daily-coding-problem?style=plastic)](https://github.com/Shivam010/daily-coding-problem/blob/master/LICENSE)
